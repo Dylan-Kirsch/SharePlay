@@ -35,7 +35,11 @@ body {
 
 /* ******* CAROUSEL ************ */
 
-
+.description {
+    background-color: #00000077;
+    width: 100%;
+    text-align-last: start;
+}
 
 
 
