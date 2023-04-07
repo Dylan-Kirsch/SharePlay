@@ -1,11 +1,11 @@
 #ajoutRecent {
     margin: 2% 1%;
     width: max-content;
-    overflow: auto;
 }
 
 #list {
     display: flex;
+    
 }
 
 .item {
@@ -14,7 +14,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 0 3%;
-    border-right: 3px solid #00000016;
+    /* border-right: 3px solid #00000016; */
 }
 
 .item img {
