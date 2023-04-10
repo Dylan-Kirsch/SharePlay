@@ -73,15 +73,16 @@ main h1 {
     text-align-last: justify;
 }
 
-#prev, #btnNext {
+#btnPrev, #btnNext {
     background-color: white;
+    border: none;
 }
 
-#prev:hover, #next:hover {
+#btnPrev:hover, #btnNext:hover {
     background-color: cornflowerblue;
-}
+} 
 
-#prev {
+#btnPrev {
     margin-left: 1%;
 }
 
@@ -110,6 +111,11 @@ main h1 {
     object-fit: cover;
 }
 
+.carte {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+}
+
 .avatar {
     grid-column: 1;
 }
@@ -118,10 +124,14 @@ main h1 {
     grid-column: 2;
 }
 
-.avatar3 {
-    grid-row: 2;
-    grid-column: 1 / span 2;
+#overley1, #overley2, #overley3 {
+    padding: 0px;
+    color: #fff;
+    font-family: 'Sansita', sans-serif;
 }
 
-
+.card-title, .card-text {
+    background-color: #00000060;
+    text-align: center;
+}
 
