@@ -317,3 +317,97 @@ main h1 {
 footer {
     font-family: 'Sansita', sans-serif;
 }
+
+
+/* **************************** MES GALERIES ******************************************************************* */
+
+#imgGalerie img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+#imgGalerie .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Sansita', sans-serif;
+    font-size: 3em;
+}
+
+#imgGalerie .overley2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000041;
+    font-size: 2em;
+}
+
+
+/* ******* GALERIES ********* */
+
+.maGalerie {
+    color: #000000;
+    font-family: 'Sansita', sans-serif;
+    font-size: 2.2em;
+    padding-top: 4%;
+    margin: 0px 0px 35px 30px;
+}
+
+.itemGalierie {
+    display: grid;
+    gap: 35px;
+    grid-template-rows: 320px 320px 320px 320px;
+    margin: 4% 5% 4% 8%;
+}
+
+
+
+.itemGalierie img {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+#mesGaleries .overley2 {
+    font-family: 'Sansita', sans-serif;
+    color: #fff;
+    background-color: #0000005e;
+    justify-content: center;
+    padding: 0;
+}
+
+#mesGaleries .card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+.galerie {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    box-shadow: 0px 0px 8px 2px #00000050;
+}
+
+.galerie2 {
+    grid-column: 2 / span 5;
+    grid-row: 2;
+}
+
+.galerie3 {
+    grid-column: 1 / span 5;
+    grid-row: 3;
+    box-shadow: 0px 0px 8px 2px #00000050;
+}
+
+.galerie4 {
+    grid-column: 2 /span 5;
+    grid-row: 4;
+}
+
+
+
+/* ******************************  TOUTE LES COMMUNAUTES ************************************ */
+
