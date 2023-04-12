@@ -36,6 +36,11 @@ body {
     border-radius: 0% 0% 100% 0% / 0% 0% 7% 0% ;
 }
 
+/* ******* PROFIL ****************** */
+
+#profil {
+    background-color: #fff;
+}
 
 /* ******* CAROUSEL ************ */
 
@@ -361,8 +366,6 @@ footer {
     margin: 4% 5% 4% 8%;
 }
 
-
-
 .itemGalierie img {
     width: 100%;
     height: -webkit-fill-available;
@@ -410,4 +413,111 @@ footer {
 
 
 /* ******************************  TOUTE LES COMMUNAUTES ************************************ */
+
+#imgComu img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+#imgComu .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Sansita', sans-serif;
+    font-size: 3em;
+}
+
+#imgComu .overley2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000041;
+    font-size: 2em;
+}
+
+/* ******* TOUT LES JEUX  ************** */
+
+.jeux {
+    color: #000000;
+    font-family: 'Sansita', sans-serif;
+    font-size: 2.2em;
+    padding-top: 3%;
+    margin: 0px 0px 35px 18px;
+}
+
+.allJeux img {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+.allJeux .overley2 {
+    font-family: 'Sansita', sans-serif;
+    color: #fff;
+    background-color: #0000005e;
+    justify-content: center;
+    padding: 0;
+}
+
+.allJeux .card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+#toutJeux .card {
+    margin-left: 3%;
+}
+
+
+/* ****** TOUT LES UNIVERS ********* */
+
+.univers {
+    color: #000000;
+    font-family: 'Sansita', sans-serif;
+    font-size: 2.2em;
+    padding-top: 5%;
+    margin: 0px 0px 35px 18px;
+}
+
+.allUnivers img {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+.allUnivers .overley2 {
+    font-family: 'Sansita', sans-serif;
+    color: #fff;
+    background-color: #0000005e;
+    justify-content: center;
+    padding: 0;
+}
+
+.allUnivers .card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+#toutUnivers .card {
+    margin-left: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
