@@ -21,7 +21,7 @@ body {
 #navBtn {
     margin-right: 70px;
     border-radius: 30px;
-    background-color: #00439C;
+    background-color: #0064e7;
     color: #fff;
 }
 
@@ -40,7 +40,7 @@ body {
 /* ******* CAROUSEL ************ */
 
 #carousel, #carousel .active {
-    height: 100vh;
+    height: 101vh;
 }
 
 .description {
@@ -146,9 +146,10 @@ main h1 {
 
 /* ************* SECTION UNIVERS PLUS REGARDER *************** */
 
-#plusRegarder {
+#universPlusRegarder {
     background-color: #00439C;
     padding-bottom: 4%;
+    border-radius: 0% 0% 100% 0% / 0% 0% 1.5% 0%;
 }
 
 .universRegarder {
@@ -174,34 +175,34 @@ main h1 {
     object-fit: cover;
 }
 
-#plusRegarder .card {
+#universPlusRegarder .card {
     border: none;
 }
 
-.regarder {
+.plusRegarder {
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
 }
 
-.regarder3 {
+.plusRegarder3 {
     grid-column: 1 / span 2;
 }
 
-.regarder4 {
+.plusRegarder4 {
     grid-column: 3;
     grid-row: 2;
 }
 
-.regarder5 {
+.plusRegarder5 {
     grid-column: 1 / span 2;
 }
 
-.regarder6 {
+.plusRegarder6 {
     grid-column: 3;
     grid-row: 3 / span 2;
 }
 
-#plusRegarder .overley2 {
+#universPlusRegarder .overley2 {
     font-family: 'Sansita', sans-serif;
     color: #fff;
     background-color: #0000005e;
@@ -209,7 +210,7 @@ main h1 {
     padding: 0;
 }
 
-#plusRegarder .card-title{
+#universPlusRegarder .card-title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,4 +245,75 @@ main h1 {
 
 .multiple2 img, .multiple3 img {
     border-radius: 100% 0% 100% 0% / 100% 0% 100% 100% 
+}
+
+
+/* ************* SECTION JEUX PLUS REGARDER *************** */
+
+.jeuxRegarder {
+    color: #000000;
+    font-family: 'Sansita', sans-serif;
+    font-size: 2.2em;
+    padding-top: 4%;
+    margin: 0px 0px 35px 30px;
+}
+
+.itemJeux {
+    display: grid;
+    gap: 25px;
+    width: 85%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    margin: 4% 5% 1% 8%;
+}
+
+.itemJeux img {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+#jeuxPlusRegarder .overley2 {
+    font-family: 'Sansita', sans-serif;
+    color: #fff;
+    background-color: #0000005e;
+    justify-content: center;
+    padding: 0;
+}
+
+#jeuxPlusRegarder .card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.jeux {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.jeux3 {
+    grid-column: 1 / span 2;
+}
+
+.jeux4 {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+}
+
+.jeux5 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.jeux6 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+/* *********** FOOTER ********** */
+
+footer {
+    font-family: 'Sansita', sans-serif;
 }
