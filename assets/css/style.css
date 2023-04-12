@@ -3,6 +3,66 @@ body {
     margin: 0;
 }
 
+
+.profil-dropdown ul {
+    list-style: none;
+}
+
+.profil-dropdown li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3em;
+    font-family: 'EB Garamond', serif;
+}
+
+.profil-dropdown-btn {
+    
+}
+
+.profil-dropdown span {
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+
+}
+
+.profil-dropdown img {
+    width: 15%;
+    border-radius: 50px;
+    margin-left: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #navbar {
     background-color: #00000077;
     border-radius: 10% 36% 98% 0% / 0% 0% 32% 0%;
@@ -26,7 +86,7 @@ body {
 }
 
 #pseudo {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-family: 'EB Garamond', serif;
     font-weight: 600;
 }
