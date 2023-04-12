@@ -21,6 +21,8 @@ body {
 #navBtn {
     margin-right: 70px;
     border-radius: 30px;
+    background-color: #00439C;
+    color: #fff;
 }
 
 #pseudo {
@@ -36,10 +38,11 @@ body {
 
 
 /* ******* CAROUSEL ************ */
-#carousel {
+
+#carousel, #carousel .active {
     height: 100vh;
-    margin-bottom: 2%;
 }
+
 .description {
     background-color: #00000077;
     text-align-last: start;
@@ -61,6 +64,20 @@ main h1 {
 
 
 /* ****** SECTION AJOUT RECENT ******** */
+
+#ajoutRecent {
+    background-color: #ffffff;
+    position: relative;
+    top: 20px;
+    border-radius: 0% 0% 100% 0% / 0% 0% 5% 0%;
+    padding-bottom: 25px;
+}
+
+.ajout {
+    font-size: 2.2em;
+    font-family: 'Sansita', sans-serif;
+    margin: 10px 0px 35px 8px;
+}
 
 .coverImg {
     object-fit: cover;
@@ -96,7 +113,7 @@ main h1 {
     display: flex;
 }
 
-.item {
+.itemRecent {
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 1fr;
@@ -105,33 +122,126 @@ main h1 {
     /* border-right: 3px solid #00000016; */
 }
 
-.item img {
+.itemRecent img {
     width: 100%;
     height: 22vh;
     object-fit: cover;
 }
 
 .carte {
-    grid-row: 2;
     grid-column: 1 / span 2;
 }
 
-.avatar {
-    grid-column: 1;
-}
-
-.avatar2 {
-    grid-column: 2;
-}
-
-#overley1, #overley2, #overley3 {
+#ajoutRecent .overley1 {
     padding: 0px;
     color: #fff;
     font-family: 'Sansita', sans-serif;
 }
 
-.card-title, .card-text {
+#ajoutRecent .card-title, .card-text {
     background-color: #00000060;
     text-align: center;
+    font-size: 1.5em;
 }
 
+/* ************* SECTION UNIVERS PLUS REGARDER *************** */
+
+#plusRegarder {
+    background-color: #00439C;
+    padding-bottom: 4%;
+}
+
+.universRegarder {
+    color: #fff;
+    font-family: 'Sansita', sans-serif;
+    font-size: 2.2em;
+    padding-top: 4%;
+    margin: 2px 0px 35px 8px;
+}
+
+.itemRegarder {
+    display: grid;
+    gap: 25px;
+    width: 85%;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1fr;
+    margin: 4% 5% 1% 8%;
+}
+
+.itemRegarder img {
+    width: 100%;
+    height: -webkit-fill-available;
+    object-fit: cover;
+}
+
+#plusRegarder .card {
+    border: none;
+}
+
+.regarder {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+}
+
+.regarder3 {
+    grid-column: 1 / span 2;
+}
+
+.regarder4 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.regarder5 {
+    grid-column: 1 / span 2;
+}
+
+.regarder6 {
+    grid-column: 3;
+    grid-row: 3 / span 2;
+}
+
+#plusRegarder .overley2 {
+    font-family: 'Sansita', sans-serif;
+    color: #fff;
+    background-color: #0000005e;
+    justify-content: center;
+    padding: 0;
+}
+
+#plusRegarder .card-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+
+
+#all {
+    display: grid;
+    height: -webkit-fill-available;
+    background-color: #000000;
+    gap: 3px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.multiple {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.multiple img, .multiple4 img {
+    border-radius: 100% 100% 0% 100% / 0% 100% 0% 100%;
+}
+
+.multiple2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.multiple2 img, .multiple3 img {
+    border-radius: 100% 0% 100% 0% / 100% 0% 100% 100% 
+}
