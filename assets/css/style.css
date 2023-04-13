@@ -3,34 +3,95 @@ body {
     margin: 0;
 }
 
-
-.profil-dropdown ul {
-    list-style: none;
+.dropAction {
+    width: 10%;
+    height: 12vh;
+    text-align: end;
 }
 
-.profil-dropdown li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.3em;
-    font-family: 'EB Garamond', serif;
+.dropAction .dropProfil {
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
 }
 
-.profil-dropdown-btn {
-    
-}
-
-.profil-dropdown span {
-    font-family: 'Sansita', sans-serif;
-    font-size: 1.5em;
-    color: #fff;
-
-}
-
-.profil-dropdown img {
-    width: 15%;
+.dropAction .dropProfil img {
+    width: 48%;
     border-radius: 50px;
+}
+
+.dropMenu {
+    display: none;
+    flex-wrap: wrap;
+    width: 171%;
+    height: 50vh;
+    position: relative;
+    border-radius: 5px;
+    top: 5px;
+    right: 124px;
+    background-color: #fff;
+    text-align: start;
+}
+
+.dropMenu img {
+    width: 30%;
+    height: fit-content;
+    border-radius: 60px;
+}
+
+.dropMenu ul, .dropMenu li a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.dropMenu li {
+    margin-bottom: 12%;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    padding-left: 3%;
+}
+
+.dropMenu li:nth-last-child(1) {
+    margin-top: 11%;
+    padding-right: 5%;
+    width: fit-content;
+    float: right;
+}
+
+.dropMenu li:hover {
+    background-color: #afafaf30;
+    transition: 0.4s;
+}
+
+.profil {
+    display: flex;
+    margin-top: 4%;
+    margin-bottom: 7%;
+    height: 14vh;
+    border-bottom: 2px solid #00000014;
+}
+
+.profil img {
+    margin-top: 4%;
     margin-left: 2%;
 }
+
+.profil span {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.8em;
+}
+
+.profil h3 {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+
 
 
 
@@ -70,6 +131,7 @@ body {
 
 #nomSite {
     font-size: 2em;
+    color: #fff;
     font-family: 'Metal Mania', cursive;
 }
 
@@ -498,7 +560,7 @@ footer {
 
 /* ******* TOUT LES JEUX  ************** */
 
-.jeux {
+.jeu {
     color: #000000;
     font-family: 'Sansita', sans-serif;
     font-size: 2.2em;
