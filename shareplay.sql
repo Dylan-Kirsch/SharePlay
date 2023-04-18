@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS Users
     id INT primary key AUTO_INCREMENT,
     nom VARCHAR(255) NOT NULL,
     prenom VARCHAR(255) NOT NULL,
-    pseudo VARCHAR(255) NOT NULL
+    pseudo VARCHAR(255) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL
 
 );
 
@@ -56,13 +57,6 @@ CREATE TABLE IF NOT EXISTS consoles
 
 );
 
-CREATE TABLE IF NOT EXISTS genres
-(
-
-    id INT primary key AUTO_INCREMENT,
-    libelle VARCHAR(255) NOT NULL
-
-);
 
 CREATE TABLE IF NOT EXISTS news
 (
@@ -71,5 +65,21 @@ CREATE TABLE IF NOT EXISTS news
     titre VARCHAR(255) NOT NULL,
     information text NOT NULL,
     photo VARCHAR(255) NOT NULL
+
+);
+
+CREATE TABLE IF NOT EXISTS likes
+(
+
+    num_user INT,
+    num_galerie_creer INT
+
+);
+
+CREATE TABLE IF NOT EXISTS commenter
+(
+
+    num_user INT,
+    num_galerie_creer INT
 
 );
