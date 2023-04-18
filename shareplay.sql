@@ -11,16 +11,6 @@ CREATE TABLE IF NOT EXISTS Users
 
 );
 
-CREATE TABLE IF NOT EXISTS PHOTOS 
-(
-
-    id INT primary key AUTO_INCREMENT,
-    titre VARCHAR(255) NOT NULL,
-    resumer TEXT NOT NULL,
-    photo VARCHAR(255) NOT NULL,
-    tag VARCHAR(255) NOT NULL
-
-);
 
 CREATE TABLE IF NOT EXISTS administrateur
 (
@@ -44,6 +34,9 @@ CREATE TABLE IF NOT EXISTS galeries_creer
 (
 
     id INT primary key AUTO_INCREMENT,
+    titre VARCHAR(255) NOT NULL,
+    photo VARCHAR(255) NOT NULL,
+    tag VARCHAR(255) NOT NULL,
     pseudo VARCHAR(255) NOT NULL
 
 );
