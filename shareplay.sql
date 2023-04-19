@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS share_play;
 
-CREATE TABLE IF NOT EXISTS Users
+CREATE TABLE IF NOT EXISTS User
 (
 
     id INT primary key AUTO_INCREMENT,
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS administrateur
 
 );
 
-CREATE TABLE IF NOT EXISTS galeries
+CREATE TABLE IF NOT EXISTS type_affichage
 (
 
     id INT primary key AUTO_INCREMENT,
@@ -30,19 +30,16 @@ CREATE TABLE IF NOT EXISTS galeries
 
 );
 
-CREATE TABLE IF NOT EXISTS galeries_creer
+CREATE TABLE IF NOT EXISTS galerie
 (
 
     id INT primary key AUTO_INCREMENT,
-    titre VARCHAR(255) NOT NULL,
-    photo VARCHAR(255) NOT NULL,
-    tag VARCHAR(255) NOT NULL,
-    pseudo VARCHAR(255) NOT NULL
+    titre VARCHAR(255) NOT NULL
 
 );
 
 
-CREATE TABLE IF NOT EXISTS consoles
+CREATE TABLE IF NOT EXISTS console
 (
 
     id INT primary key AUTO_INCREMENT,
@@ -61,18 +58,10 @@ CREATE TABLE IF NOT EXISTS news
 
 );
 
-CREATE TABLE IF NOT EXISTS likes
+CREATE TABLE IF NOT EXISTS tag
 (
 
-    num_user INT,
-    num_galerie_creer INT
-
-);
-
-CREATE TABLE IF NOT EXISTS commenter
-(
-
-    num_user INT,
-    num_galerie_creer INT
+    id INT primary key AUTO_INCREMENT,
+    libelle VARCHAR(255) NOT NULL
 
 );

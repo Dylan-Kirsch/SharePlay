@@ -119,11 +119,20 @@
 
 
         </nav>
+
+        <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">   
+            <div class="carousel-inner">
+                <?=$carouselNews?>
+            </div>
+        </div>
+
+        
+        
     </header>
 
 
 
-    <main><?=$content?></main>
+    
 
 </body>
 </html>

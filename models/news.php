@@ -1,6 +1,6 @@
 <?php
 
-    class Jeux {
+    class News {
 
         public int $id;
 

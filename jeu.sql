@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS jeux
+CREATE TABLE IF NOT EXISTS jeu
 (
 
     id INT primary key AUTO_INCREMENT,
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS jeux
 
 );
 
-INSERT INTO `jeux` (`id`, `titre`, `photo_default`) VALUES
+INSERT INTO `jeu` (`id`, `titre`, `photo_default`) VALUES
 (1, 'Atomic Heart' ,'atomic-heart.jpg'),
 (2, 'Battlefield 2042' ,'battlefield-2042.jpeg'),
 (3, 'Dead island 2' ,'dead-island-2.jpg'),
