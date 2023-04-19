@@ -38,35 +38,35 @@
                 <div class="btnCreer">
                     <button id="navBtn" class="btn">Créer une galerie</button>
                 </div> 
+                <form action="">
+                    <div id="dropCreer">
+                        <div class="titre">
+                            <h3>Créer vôtre galerie</h3>
+                        </div>
+                        <div id="choixJeux">
+                            <h4>Choisir un jeu ou un univers de jeu</h4>
+                            <span>O</span>
+                        </div>
 
-                <div id="dropCreer">
-                    <div class="titre">
-                        <h3>Créer vôtre galerie</h3>
+                        <div id="choixTags">
+                            <h4>Ajouter des tags</h4>
+                            <span>Ex: paysage, nuit...</span>
+                        </div>
+
+                        <div id="ajoutImg">
+                            <h4>5 images restantes</h4>
+                            <i class="fa-solid fa-circle-plus fa-2xl"></i>
+                            <h4>Ajouter une image</h4>
+                            <span>jpg, png 5Mo max - 5 images max</span>
+                        </div>
+
+                        <div id="choixGalerie">
+                            <h4>Choisir le type de galerie</h4>
+                            <span>classique manuel</span>
+                        </div>
+
                     </div>
-                    <div id="choixJeux">
-                        <h4>Choisir un jeu ou un univers de jeu</h4>
-                        <span>O</span>
-                    </div>
-
-                    <div id="choixTags">
-                        <h4>Ajouter des tags</h4>
-                        <span>Ex: paysage, nuit...</span>
-                    </div>
-
-                    <div id="ajoutImg">
-                        <h4>5 images restantes</h4>
-                        <i class="fa-solid fa-circle-plus fa-2xl"></i>
-                        <h4>Ajouter une image</h4>
-                        <span>jpg, png 5Mo max - 5 images max</span>
-                    </div>
-
-                    <div id="choixGalerie">
-                        <h4>Choisir le type de galerie</h4>
-                        <span>classique manuel</span>
-                    </div>
-
-                </div>
-
+                </form>
             </div>
 
 
