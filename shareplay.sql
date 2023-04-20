@@ -38,6 +38,14 @@ CREATE TABLE IF NOT EXISTS galerie
 
 );
 
+CREATE TABLE IF NOT EXISTS photo
+(
+
+    id INT primary key AUTO_INCREMENT,
+    photo VARCHAR(255) NOT NULL
+
+);
+
 
 CREATE TABLE IF NOT EXISTS console
 (

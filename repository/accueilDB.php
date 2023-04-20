@@ -54,7 +54,7 @@
             {
 
                 $stmt = Database::getInstance()->query("SELECT * FROM NEWS");
-                $value = $stmt->fetcha();
+                $value = $stmt->fetch();
                 $resultat = new ArrayObject();
 
                 if ($value!=false) {

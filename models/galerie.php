@@ -1,28 +1,21 @@
 <?php
 
-    class GalerieCreer
+    class Galerie
     {
 
         public int $id;
 
-        public string $titre;
+        public Jeux $jeux;
 
-        public $photo;
-
-        public string $tag;
-
-        public string $pseudo;
+        public Univers $univers;
 
 
-        public function __construct($pId, $pTitre, $pPhoto, $pTag, $pPseudo)
+        public function __construct($pId, Jeux $pJeux, Univers $pUnivers)
         {
 
             $this->id = $pId;
-            $this->titre = htmlentities($pTitre);
-            $this->photo = htmlentities($pPhoto);
-            $this->tag = htmlentities($pTag);
-            $this->pseudo = htmlentities($pPseudo);
-
+            $this->jeux = $pJeux;
+            $this->univers = $pUnivers;
         }
 
 
