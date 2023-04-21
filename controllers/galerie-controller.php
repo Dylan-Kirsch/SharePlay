@@ -57,7 +57,7 @@
 
     function ajouterGalerie()
     {
-    // Début de la mise en cache
+    
     ob_start();
     
     if (count($_POST)==0)

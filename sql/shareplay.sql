@@ -27,6 +27,8 @@ CREATE TABLE IF NOT EXISTS type_affichage
 
     id INT primary key AUTO_INCREMENT,
     types VARCHAR(255) NOT NULL
+    -- num_jeu clé étrangére
+    -- num_univers clé étrangére
 
 );
 
