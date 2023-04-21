@@ -20,7 +20,7 @@
         else
         include('views\afficherException.php');
 
-        $content = ob_get_clean();
+        $ajout = ob_get_clean();
         include 'views/layout.php';
 
     }
@@ -49,7 +49,7 @@
         else
         include('views\afficherException.php');
         
-        $content = ob_get_clean();
+        $ajout = ob_get_clean();
         include 'views/layout.php';
 
     }

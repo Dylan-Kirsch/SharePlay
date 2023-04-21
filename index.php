@@ -21,13 +21,13 @@
     require_once('models\galerie.php');
 
 
-    session_start();
-
+    session_start(); 
+    
     if (isset($_GET['/']))
                 $accueil = $_GET['/'];
             else
                 $accueil = 'news';
-
+    
     switch($accueil)
     {
 

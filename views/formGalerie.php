@@ -1,5 +1,6 @@
 <form method="POST" enctype="multipart/form-data">
     <div id="dropCreer">
+        
         <div class="titre">
             <h3>Créer vôtre galerie</h3>
         </div>

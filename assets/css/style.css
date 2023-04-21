@@ -259,20 +259,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ******************** BARRE NAV ****************************************************** */
 
 #navbar {
@@ -297,11 +283,15 @@ body {
     border-radius: 0% 0% 100% 0% / 0% 0% 7% 0% ;
 }
 
+
+
 /* ******* PROFIL ****************** */ 
 
 #profil {
     background-color: #fff;
 }
+
+
 
 /* ******* CAROUSEL ************ */
 
@@ -328,6 +318,7 @@ main h1 {
     font-family: 'EB Garamond', serif;
     padding-top: 15px;
 }
+
 
 
 /* ****** SECTION AJOUT RECENT ******** */
@@ -386,7 +377,6 @@ main h1 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 0 3%;
-    /* border-right: 3px solid #00000016; */
 }
 
 .itemRecent img {
@@ -410,6 +400,9 @@ main h1 {
     text-align: center;
     font-size: 1.5em;
 }
+
+
+
 
 /* ************* SECTION UNIVERS PLUS REGARDER *************** */
 
@@ -484,8 +477,6 @@ main h1 {
     font-size: 2em;
 }
 
-
-
 #all {
     display: grid;
     height: -webkit-fill-available;
@@ -515,7 +506,9 @@ main h1 {
 }
 
 
-/* ************* SECTION JEUX PLUS REGARDER *************** */
+
+
+/* ************* SECTION JEUX PLUS REGARDER ***************** */
 
 .jeuxRegarder {
     color: #000000;
@@ -579,11 +572,15 @@ main h1 {
     grid-row: 4;
 }
 
+
+
 /* *********** FOOTER ********** */
 
 footer {
     font-family: 'Sansita', sans-serif;
 }
+
+
 
 
 /* **************************** MES GALERIES ******************************************************************* */
@@ -611,7 +608,9 @@ footer {
 }
 
 
-/* ******* GALERIES ********* */
+
+
+/* ********* GALERIES *********** */
 
 .maGalerie {
     color: #000000;
@@ -674,6 +673,7 @@ footer {
 
 
 
+
 /* ******************************  TOUTE LES COMMUNAUTES ************************************ */
 
 #imgComu img {
@@ -698,7 +698,9 @@ footer {
     font-size: 2em;
 }
 
-/* ******* TOUT LES JEUX  ************** */
+
+
+/* ******** TOUT LES JEUX  *************** */
 
 .jeu {
     color: #000000;
@@ -735,6 +737,7 @@ footer {
 }
 
 
+
 /* ****** TOUT LES UNIVERS ********* */
 
 #toutUnivers .univers {
@@ -759,7 +762,7 @@ footer {
     padding: 0;
 }
 
-.allUnivers .card-title{
+.allUnivers .card-title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -769,4 +772,22 @@ footer {
 
 #toutUnivers .card {
     margin-left: 3%;
+}
+
+
+
+/* ********************* RESPONSIVE *********************************************** */
+
+@media screen and (max-width: 767px) {
+
+    #navbar {
+        height: 5vh;
+        padding: 2px;
+    }
+
+    #navGauche {
+        font-size: 0.7em;
+        padding: 0;
+    }
+
 }

@@ -39,7 +39,7 @@
                     <button id="navBtn" class="btn">Créer une galerie</button>
                 </div> 
                 
-                <?=$ajout?>
+                <?php include 'formGalerie.php'?>
 
             </div>
 

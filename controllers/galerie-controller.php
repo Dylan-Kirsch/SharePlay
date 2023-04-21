@@ -83,7 +83,6 @@
     }
 
     $ajout = ob_get_clean();
-    
     include 'views/layout.php';
     }
 
