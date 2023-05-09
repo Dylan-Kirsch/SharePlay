@@ -1,12 +1,15 @@
 <form method="POST" enctype="multipart/form-data">
     <div id="dropCreer">
-        
+    <?php ?>
+    <?php
+?>
+
         <div class="titre">
             <h3>Créer vôtre galerie</h3>
         </div>
         <div id="choixJeux">
             <h4>Choisir un jeu ou un univers de jeu</h4>
-
+            
 
             <div class="jeux">
                 <label for="Jeux">Jeux</label>
@@ -14,12 +17,12 @@
                 <select id="Jeux" name="idJeu">
 
                     <?php
-
-                        foreach ($jeux as $jeu): ?>
-                        <option value="<?=$jeu->id?>"<?=(isset($_POST['idJeu'])&&$_POST['idJeu']==$jeu->id)?" SELECTED ":""?>><?=$jeu->titre?> <?=$jeu->photo_default?></option>
+                    foreach ($listeJeux->getdata() as $key => $jeu){?>
+                            <?= $jeu->id?>
+                        <option value="<?=$jeu->id?>"<?=(isset($_POST['idJeu'])&&$_POST['idJeu']==$jeu->id)?" SELECTED ":""?>><?=$jeu->titre?></option>
 
                     <?php
-                    endforeach; ?>
+                    }?>
 
                 </select>
             </div>    
@@ -32,8 +35,8 @@
 
                     <?php
 
-                        foreach ($univers as $univer): ?>
-                        <option value="<?=$univer->id?>"<?=(isset($_POST['idUnivers'])&&$_POST['idUnivers']==$univer->id)?" SELECTED ":""?>><?=$univer->titre?> <?=$univer->photo_default?></option>
+                        foreach ($listeUnivers->getdata() as $univer): ?>
+                        <option value="<?=$univer->id?>"<?=(isset($_POST['idUnivers'])&&$_POST['idUnivers']==$univer->id)?" SELECTED ":""?>><?=$univer->titre?></option>
 
                     <?php
                     endforeach; ?>
