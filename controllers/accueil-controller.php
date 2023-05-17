@@ -3,11 +3,11 @@
 
     function afficherNews()
     {
-
+        
         ob_start();
 
         $reponse = NewsDB::lister();
-        $listeJeux= JeuxDB::lister();
+        $listeJeux = JeuxDB::lister();
         $listeUnivers = UniversDB::lister();
         if ($reponse->isSuccessfull())
         {
@@ -68,5 +68,7 @@
         include 'views/layout.php';
 
     }
+
+    
 
 ?>

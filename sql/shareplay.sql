@@ -27,8 +27,6 @@ CREATE TABLE IF NOT EXISTS type_affichage
 
     id INT primary key AUTO_INCREMENT,
     types VARCHAR(255) NOT NULL
-    -- num_jeu clé étrangére
-    -- num_univers clé étrangére
 
 );
 
@@ -36,7 +34,10 @@ CREATE TABLE IF NOT EXISTS galerie
 (
 
     id INT primary key AUTO_INCREMENT,
-    titre VARCHAR(255) NOT NULL
+    num_jeu int NOT NULL,
+    num_univers int NOT NULL,
+    FOREIGN KEY (num_jeu) REFERENCES jeu(id),
+    FOREIGN KEY (num_univers) REFERENCES univers (id)
 
 );
 

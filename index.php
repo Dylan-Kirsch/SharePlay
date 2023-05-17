@@ -19,6 +19,8 @@
     require_once('models\accueil.php');
     require_once('models\univers.php');
     require_once('models\galerie.php');
+    require_once('models\photo.php');
+    require_once('models\tag.php');
 
 
     session_start(); 
@@ -39,18 +41,8 @@
                 afficherNews();
             break;
         
-        case 'ajout':
 
-            if (isset($_GET['id']))
-                afficherUneGalerie($_GET['id']);
-            else
-                afficherGalerie();
-            break;
-            
-        case 'ajouter-galerie':
-                ajouterGalerie();
-            break;
-
+        default: afficherNews();
             
 
     }

@@ -3,8 +3,6 @@
     function afficherGalerie()
     {
 
-        ob_start();
-
         $reponse = GalerieDB::lister();
 
         if ($reponse->isSuccessfull())
@@ -20,16 +18,11 @@
         else
         include('views\afficherException.php');
 
-        $ajout = ob_get_clean();
-        include 'views/layout.php';
-
     }
 
 
     function afficherUneGalerie($pId)
     {
-
-        ob_start();
 
         $reponse = GalerieDB::lire($pId);
 
@@ -47,10 +40,9 @@
                 include('views\galerieNonTrouvee.php');
         }
         else
-        include('views\afficherException.php');
-        
-        $ajout = ob_get_clean();
-        include 'views/layout.php';
+        {
+            include('views\afficherException.php');
+        }
 
     }
 
@@ -58,32 +50,29 @@
     function ajouterGalerie()
     {
     
-    ob_start();
-    
-    if (count($_POST)==0)
-    {
-        $jeux = JeuxDB::lister()->getData();
-        $univers = UniversDB::lister()->getData();
-        include 'views\formGalerie.php';
-    }
-    else
-    {   
-       
+        if (count($_POST)==0)
+        {
+            $jeu = JeuxDB::lister()->getData();
+            $univers = UniversDB::lister()->getData();
+            
+            
+            
+        }
+        else
+        {   
+        
             $resultat = GalerieDB::creer($_POST);
             if ($resultat)
                 include 'views\galerieAjouter.php';
             else
             {
-                $jeux = JeuxDB::lister()->getData();
+                $jeu = JeuxDB::lister()->getData();
                 $univers = UniversDB::lister()->getData();
-                include 'views\formGalerie.php';
+
+                
             }
-
-            
-    }
-
-    $ajout = ob_get_clean();
-    include 'views/layout.php';
+                
+        }
     }
 
 ?>

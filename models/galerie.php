@@ -9,13 +9,19 @@
 
         public Univers $univers;
 
+        public Tag $tag;
 
-        public function __construct($pId, Jeux $pJeux, Univers $pUnivers)
+        public Photo $photo;
+
+
+        public function __construct($pId, Jeux $pJeux, Univers $pUnivers, Tag $pTag, Photo $pPhoto)
         {
 
             $this->id = $pId;
             $this->jeux = $pJeux;
             $this->univers = $pUnivers;
+            $this->tag = $pTag;
+            $this->photo = $pPhoto;
         }
 
 

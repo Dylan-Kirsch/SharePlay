@@ -1,9 +1,7 @@
 <?php
-
+    
     function afficherUnivers()
     {
-
-        ob_start();
 
         $reponse = UniversDB::lister();
 
@@ -20,16 +18,11 @@
         else
         include('views\afficherException.php');
 
-        $ajout = ob_get_clean();
-        include 'views/layout.php';
-
     }
 
 
     function afficherUnUnivers($pId)
     {
-
-        ob_start();
 
         $reponse = UniversDB::lire($pId);
 
@@ -49,9 +42,6 @@
         else
         include('views\afficherException.php');
         
-        $ajout = ob_get_clean();
-        include 'views/layout.php';
-
     }
 
 ?>

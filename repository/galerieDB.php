@@ -9,10 +9,10 @@
             try 
             {
             
-                $stmt = Database::getInstance()->query("SELECT *, galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers' 
-                                                        FROM GALERIE,JEU,UNIVERS 
-                                                        WHERE JEU.ID = GALERIE.num_JEU
-                                                        AND UNIVERS.ID = GALERIE.num_UNIVERS;");
+                $stmt = Database::getInstance()->query("SELECT *, galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers', tag.id as 'idTag', photo.id as 'idPhoto'
+                                                        FROM GALERIE,JEU,UNIVERS, TAG, PHOTO 
+                                                        WHERE JEU.ID = GALERIE.num_jeu
+                                                        AND UNIVERS.ID = GALERIE.num_univers;");
 
                 $resultat = $stmt->fetchall();
                 $listeGalerie = new ArrayObject();
@@ -30,12 +30,26 @@
                         $value['titre'],
                         $value['photo_default']
                     );
+                    
+                    $tag = new Tag(
+                        $value['id'],
+                        $value['libelle']
+                    );
+
+                    $photo = new Photo(
+                        $value['id'],
+                        $value['photo']
+                    );
 
                     $galerie = new Galerie(
                         $value['id'],
                         $jeux,
-                        $univers
+                        $univers,
+                        $tag,
+                        $photo
                     );
+
+                    
                 
                     $listeGalerie->append($galerie);
 
@@ -90,13 +104,26 @@
                         $value['photo_default']
                     );
 
+                    $tag = new Tag(
+                        $value['id'],
+                        $value['libelle']
+                    );
+
+                    $photo = new Photo(
+                        $value['id'],
+                        $value['photo']
+                    );
+
                     $galerie = new Galerie(
                         $value['id'],
                         $jeux,
-                        $univers
+                        $univers,
+                        $tag,
+                        $photo
                     );
                 
                     $resultat->append($galerie);
+                    
                     return new Reponse($resultat);
                 } 
                 else

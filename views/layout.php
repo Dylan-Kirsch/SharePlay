@@ -26,8 +26,11 @@
 
 <body>
 
+    <?php ajouterGalerie(); ?>
+
     <header class="container-fluid p-0">
-        <nav id="navbar" class="navbar navbar-expand-lg px-4 fixed-top justify-content-between">
+        
+        <nav id="navbar" class="navbar navbar-expand-lg px-4 justify-content-between">
             
             <a id="navGauche" class="navbar-brand" href="#">
                 <img id="logo1" class="rounded-circle" src="assets/images/logo-shareplay.png" alt="logo" />
@@ -50,59 +53,36 @@
                     <img id="btnProfil" src="assets/images/photo-profil.jpg" alt="photo de profil">
                 </div>
 
-                <div class="dropMenu">
-                    <div class="profil">
-                        <img src="assets/images/photo-profil.jpg" alt="photo de profil">
-                        <h3>Dylan Kirsch
-                            <span>Kurama-X9</span>
-                        </h3>
-                        
-                    </div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa-solid fa-gear"></i>
-                                Paramètre du profil
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fa-solid fa-rectangle-history-circle-user"></i>
-                                Mes galeries
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fa-solid fa-ball-pile"></i>
-                                Toutes les communautés
-                            </a>
-                        </li>
-
-                        <li class="deconnection">
-                            <a href="#">
-                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                Déconnection
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
 
 
         </nav>
+
 
         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">   
             <div class="carousel-inner">
                 <?=$carouselNews?>
             </div>
         </div>
-
+        
         
         
     </header>
+
+    <section id="ajoutRecent">
+
+    <h1 class="ajout px-4">Ajout récent</h1>
+     
+     <div id="list">
+     
+         <div class="itemRecent">
+            <?php afficherGalerie(); ?>
+         </div>
+         
+     </div>
+        
+
+    </section>
 
     
 

@@ -1,6 +1,7 @@
 <?php
 
-    class News {
+    class News 
+    {
 
         public int $id;
 
@@ -10,7 +11,8 @@
 
         public $photo;
 
-        public function __construct($pId, $pTitre, $pInformation, $pPhoto) {
+        public function __construct($pId, $pTitre, $pInformation, $pPhoto) 
+        {
 
             $this->id = $pId;
             $this->titre = htmlentities($pTitre);

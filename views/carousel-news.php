@@ -1,5 +1,4 @@
 
-
 <div class="carousel-item <?=$active?>">
     <img class="cImg d-block" src="assets/images/jeux/<?=$news->photo?>" alt="dead island 2">
     <div class="description text-white d-none d-md-block ">
@@ -7,4 +6,3 @@
         <p class="paraCarousel"><?=$news->information?></p>
     </div>
 </div>
-  

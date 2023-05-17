@@ -3,8 +3,6 @@
     function afficherJeux()
     {
 
-        ob_start();
-
         $reponse = JeuxDB::lister();
 
         if ($reponse->isSuccessfull())
@@ -20,16 +18,11 @@
         else
         include('views\afficherException.php');
 
-        $ajout = ob_get_clean();
-        include 'views/layout.php';
-
     }
 
 
     function afficherUnJeux($pId)
     {
-
-        ob_start();
 
         $reponse = JeuxDB::lire($pId);
 
@@ -48,9 +41,6 @@
         }
         else
         include('views\afficherException.php');
-        
-        $ajout = ob_get_clean();
-        include 'views/layout.php';
 
     }
 
