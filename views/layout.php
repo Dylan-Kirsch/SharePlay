@@ -75,9 +75,9 @@
      
      <div id="list">
      
-         <div class="itemRecent">
+        <div class="itemRecent">
             <?php afficherGalerie(); ?>
-         </div>
+        </div>
          
      </div>
         
