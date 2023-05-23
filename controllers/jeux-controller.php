@@ -1,6 +1,6 @@
 <?php
 
-    function afficherRecent()
+    function afficherJeux()
     {
 
         $reponse = GalerieDB::lister();
@@ -11,7 +11,7 @@
             foreach ($listeGalerie as $galerie) 
             {
 
-                include 'views\ajoutRecent.php';
+                include 'views\jeuxPlusRegarder.php';
 
             }
         } 

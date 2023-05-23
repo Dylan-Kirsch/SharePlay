@@ -9,6 +9,8 @@
     require_once('repository\galerieDB.php');
     require_once('repository\jeuxDB.php');
     require_once('repository\universDB.php');
+    require_once('repository\tagDB.php');
+    require_once('repository\typeAffichageDB.php');
 
     require_once('controllers\accueil-controller.php');
     require_once('controllers\galerie-controller.php');
@@ -21,6 +23,7 @@
     require_once('models\galerie.php');
     require_once('models\photo.php');
     require_once('models\tag.php');
+    require_once('models\typeAffichage.php');
 
 
     session_start(); 
@@ -40,7 +43,12 @@
             else
                 afficherNews();
             break;
-        
+
+        case 'carousel-3D':
+
+            include 'views\carousel-type\carousel-3d.php';
+
+            break;
 
         default: afficherNews();
             

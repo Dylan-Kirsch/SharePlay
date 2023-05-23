@@ -9,10 +9,12 @@
             try 
             {
             
-                $stmt = Database::getInstance()->query("SELECT *, galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers', tag.id as 'idTag', photo.id as 'idPhoto'
-                                                        FROM GALERIE,JEU,UNIVERS, TAG, PHOTO 
+                $stmt = Database::getInstance()->query("SELECT *, 
+                                                        galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers', tag.id as 'idTag', photo.id as 'idPhoto', type_affichage.id as 'idTypeAffichage'
+                                                        FROM GALERIE,JEU,UNIVERS, TAG, PHOTO, TYPE_AFFICHAGE
                                                         WHERE JEU.ID = GALERIE.num_jeu
-                                                        AND UNIVERS.ID = GALERIE.num_univers;");
+                                                        AND UNIVERS.ID = GALERIE.num_univers
+                                                        AND TAG.ID = GALERIE.num_tag;");
 
                 $resultat = $stmt->fetchall();
                 $listeGalerie = new ArrayObject();
@@ -41,12 +43,18 @@
                         $value['photo']
                     );
 
+                    $typeAffichage = new TypeAffichage(
+                        $value['id'],
+                        $value['types']
+                    );
+
                     $galerie = new Galerie(
                         $value['id'],
                         $jeux,
                         $univers,
                         $tag,
-                        $photo
+                        $photo,
+                        $typeAffichage
                     );
 
                     
@@ -114,12 +122,18 @@
                         $value['photo']
                     );
 
+                    $typeAffichage = new TypeAffichage(
+                        $value['id'],
+                        $value['types']
+                    );
+
                     $galerie = new Galerie(
                         $value['id'],
                         $jeux,
                         $univers,
                         $tag,
-                        $photo
+                        $photo,
+                        $typeAffichage
                     );
                 
                     $resultat->append($galerie);
@@ -150,14 +164,17 @@
                 return false;
                 if (!(isset($pData['idUnivers'])&& is_numeric($pData['idUnivers'])))
                 return false;
+                if (!(isset($pData['idTag'])&& is_numeric($pData['idTag'])))
+                return false;
 
             try
             {
-                $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers)
-                VALUES(:idJeu, :idUnivers);");
+                $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers, num_tag)
+                VALUES(:idJeu, :idUnivers, :idTag);");
                 
-                 $stmt->bindValue(':idJeu',$pData['idJeu']);
-                 $stmt->bindValue(':idUnivers',$pData['idUnivers']);
+                $stmt->bindValue(':idJeu',$pData['idJeu']);
+                $stmt->bindValue(':idUnivers',$pData['idUnivers']);
+                $stmt->bindValue(':idTag',$pData['idTag']);
 
                 return $stmt->execute();
             }

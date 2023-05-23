@@ -45,7 +45,7 @@
 
         <div id="choixTags">
             <h1>Ajouter des tags</h1>
-            <input type="text" id="fname" name="firstname" placeholder="Entrer un tag (facultatif)" value="<?=isset($_POST['libelle'])?$_POST['libelle']:"";?>">
+            <input type="text" id="tag" name="tag" placeholder="Entrer un tag (facultatif)" value="<?=isset($_POST['libelle'])?$_POST['libelle']:"";?>">
         </div>
 
 
