@@ -76,12 +76,25 @@
      <div id="list">
      
         <div class="itemRecent">
-            <?php afficherGalerie(); ?>
+            <?php afficherRecent(); ?>
         </div>
          
      </div>
         
 
+    </section>
+
+    <section id="universPlusRegarder">
+
+        <h1 class="universRegarder px-4">Univers le plus regarder</h1>
+
+        <div class="itemRegarder">
+            
+            <?php afficherUnivers(); ?>
+
+        </div>
+
+        
     </section>
 
     

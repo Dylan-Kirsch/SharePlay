@@ -1,14 +1,14 @@
 <?php
 
-    function afficherJeux()
+    function afficherRecent()
     {
 
-        $reponse = JeuxDB::lister();
+        $reponse = GalerieDB::lister();
 
         if ($reponse->isSuccessfull())
         {
-            $listeJeux = $reponse->getData();
-            foreach ($listeJeux as $jeux) 
+            $listeGalerie = $reponse->getData();
+            foreach ($listeGalerie as $galerie) 
             {
 
                 include 'views\ajoutRecent.php';

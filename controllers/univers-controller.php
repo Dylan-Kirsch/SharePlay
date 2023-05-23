@@ -3,15 +3,15 @@
     function afficherUnivers()
     {
 
-        $reponse = UniversDB::lister();
+        $reponse = GalerieDB::lister();
 
         if ($reponse->isSuccessfull())
         {
-            $listeUnivers = $reponse->getData();
-            foreach ($listeUnivers as $univers) 
+            $listeGalerie = $reponse->getData();
+            foreach ($listeGalerie as $galerie) 
             {
 
-                include 'views\ajoutRecent.php';
+                include 'views\universPlusRegarder.php';
 
             }
         } 
