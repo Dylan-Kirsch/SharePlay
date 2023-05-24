@@ -66,7 +66,6 @@
             {
                 $jeu = JeuxDB::lister()->getData();
                 $univers = UniversDB::lister()->getData();
-                $tag = TagDB::lister()->getdata();
 
                 
             }

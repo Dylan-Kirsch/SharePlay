@@ -9,22 +9,22 @@
 
         public Univers $univers;
 
-        public Tag $tag;
+        // public Tag $tag;
 
-        public Photo $photo;
+        // public Photo $photo;
 
-        public TypeAffichage $typeAffichage;
+        // public TypeAffichage $typeAffichage;
 
 
-        public function __construct($pId, Jeux $pJeux, Univers $pUnivers, Tag $pTag, Photo $pPhoto, TypeAffichage $pTypeAffichage)
+        public function __construct($pId, Jeux $pJeux, Univers $pUnivers)
         {
 
             $this->id = $pId;
             $this->jeux = $pJeux;
             $this->univers = $pUnivers;
-            $this->tag = $pTag;
-            $this->photo = $pPhoto;
-            $this->typeAffichage = $pTypeAffichage;
+            // $this->tag = $pTag;
+            // $this->photo = $pPhoto;
+            // $this->typeAffichage = $pTypeAffichage;
         }
 
 
