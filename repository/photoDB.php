@@ -1,6 +1,6 @@
 <?php
 
-    class TagDB
+    class PhotoDB
     {
 
         static public function lister():Reponse
@@ -9,22 +9,22 @@
             try 
             {
             
-                $stmt = Database::getInstance()->query("SELECT * from TAG;");
+                $stmt = Database::getInstance()->query("SELECT * from PHOTO;");
                 $resultat = $stmt->fetchall();
-                $listeTag = new ArrayObject();
+                $listePhoto = new ArrayObject();
 
                 foreach ($resultat as $key => $value) {
 
-                    $tag = new Tag(
+                    $photo = new Photo(
                         $value['id'],
-                        $value['libelle']
+                        $value['photo']
                     );
                 
-                    $listeTag->append($tag);
+                    $listePhoto->append($photo);
 
                 }
 
-                return new Reponse($listeTag);
+                return new Reponse($listePhoto);
 
             }
 
@@ -41,15 +41,15 @@
         {
         
             
-            if (!(isset($pData['libelle'])&& strlen($pData['libelle'])))
+            if (!(isset($pData['photo'])&& file_exists($pData['photo'])))
                 return false;
 
             try
             {
-                $stmt = Database::getInstance()->prepare("INSERT INTO TAG (libelle)
-                VALUES(:libelle)");
+                $stmt = Database::getInstance()->prepare("INSERT INTO photo (photo)
+                VALUES(:photo)");
                 
-                $stmt->bindValue(':libelle',$pData['libelle']);
+                $stmt->bindValue(':photo',$pData['photo']);
 
                 return $stmt->execute();
             }
@@ -61,8 +61,6 @@
             }
             
         }
-
-
     
     }
 ?>

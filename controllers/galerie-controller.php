@@ -59,7 +59,7 @@
         else
         {   
         
-            $resultat = GalerieDB::creer($_POST);
+            $resultat = GalerieDB::creer($_POST) && TagDB::creer($_POST);
             if ($resultat)
                 include 'views\galerieAjouter.php';
             else
@@ -67,7 +67,6 @@
                 $jeu = JeuxDB::lister()->getData();
                 $univers = UniversDB::lister()->getData();
 
-                
             }
                 
         }

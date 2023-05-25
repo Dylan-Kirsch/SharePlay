@@ -42,13 +42,17 @@
 
             </div>
         </div>
-
+        
+        <div id="choixTags">
+            <h1>Ajouter des tags</h1>
+            <input type="text" id="tag" name="libelle" placeholder="Entrer un tag (facultatif)" value="<?=isset($_POST['libelle'])?$_POST['libelle']:"";?>">
+        </div>
         
 
 
         <!-- <div id="ajoutImg">
             <h2>5 images restantes</h2>
-            <i class="fa-solid fa-circle-plus fa-2xl"></i>
+            <input type="file" name="photo">
             <h1>Ajouter une image</h1>
             <span>jpg, png 5Mo max - 5 images max</span>
         </div>  -->

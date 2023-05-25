@@ -163,14 +163,18 @@
                 return false;
                 if (!(isset($pData['idUnivers'])&& is_numeric($pData['idUnivers'])))
                 return false;
+                // if (!(isset($pData['idTag'])&& is_numeric($pData['idTag'])))
+                // return false;
 
             try
             {
+                
                 $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers)
                 VALUES(:idJeu, :idUnivers)");
                 
                 $stmt->bindValue(':idJeu',$pData['idJeu']);
                 $stmt->bindValue(':idUnivers',$pData['idUnivers']);
+                // $stmt->bindValue(':idTag',$pData['idTag']);
 
                 return $stmt->execute();
             }

@@ -11,11 +11,13 @@
     require_once('repository\universDB.php');
     require_once('repository\tagDB.php');
     require_once('repository\typeAffichageDB.php');
+    require_once('repository\photoDB.php');
 
     require_once('controllers\accueil-controller.php');
     require_once('controllers\galerie-controller.php');
     require_once('controllers\jeux-controller.php');
     require_once('controllers\univers-controller.php');
+    require_once('controllers\photo-controller.php');
 
     require_once('models\jeux.php');
     require_once('models\accueil.php');
