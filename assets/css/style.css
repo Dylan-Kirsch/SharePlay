@@ -7,7 +7,7 @@ body {
 #navbar {
     background-color: #00000077;
     border-radius: 10% 36% 98% 0% / 0% 0% 32% 0%;
-    position: relative;
+    justify-content: space-between;
     z-index: 2;
 }
 
@@ -28,11 +28,11 @@ body {
 
 .dropProfil {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .dropProfil #btnProfil {
-    width: 50%;
+    width: 37%;
     border-radius: 60px;
 }
 
@@ -47,22 +47,80 @@ body {
 /* ******************************** */
 
 .dropAction {
-    width: 10%;
+    width: 13%;
     height: 13vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 5%;
+    margin-right: 4%;
 }
+
 .dropMenu {
     display: none;
-    flex-wrap: wrap;
-    width: 200%;
+    width: 208%;
     border-radius: 5px;
     box-shadow: 0px 7px 13px -4px #0000005c;
     background-color: #fff;
     text-align: start;
+    position: relative;
+    right: 124px;
+    padding: 25px 20px;
 }
+
+/* ******************* CONNECTION ******************** */
+
+#connexion {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dropMenu h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Sansita', sans-serif;
+    margin-bottom: 40px;
+}
+
+.dropMenu #inscrire {
+    width: 100%;
+    margin-bottom: 60px;
+    height: 25px;
+    text-align: end;
+    font-size: 0.7em;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+
+.dropMenu #password, #identifiant{
+    width: 75%;
+    text-align: center;
+    margin-bottom: 83px;
+}
+
+.dropMenu input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.dropMenu #identifiant input, #password input {
+    width: 100%;
+}
+
+.dropMenu #bouton input {
+    border: none;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background-color: #0064e7;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'Sansita', sans-serif;
+}
+
+
+
+
+/* **************** CONNECTER **************************** */
 
 .dropMenu img {
     width: 19%;
@@ -132,7 +190,7 @@ body {
 
 #creerGalerie {
     height: 6vh;
-    width: 34%;
+    width: 33%;
 }
 
 .btnCreer {
@@ -148,7 +206,7 @@ body {
     box-shadow: 0px 7px 13px -4px #0000005c;
     border-radius: 10px;
     flex-wrap: wrap;
-    width: 110%;
+    width: 98%;
     visibility: hidden;
 }
 

@@ -1,0 +1,78 @@
+/* ******************************** */
+
+.dropAction {
+    width: 13%;
+    height: 13vh;
+    margin-right: 4%;
+}
+
+.dropMenu {
+    display: none;
+    width: 269%;
+    border-radius: 5px;
+    box-shadow: 0px 7px 13px -4px #0000005c;
+    background-color: #fff;
+    text-align: start;
+    position: relative;
+    right: 240px;
+    padding: 25px 20px;
+}
+
+/* ***************** INSCRIRE **************************** */
+
+#inscription {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dropMenu h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Sansita', sans-serif;
+    margin-bottom: 40px;
+}
+
+.dropMenu #seConnect {
+    width: 100%;
+    margin-bottom: 60px;
+    height: 25px;
+    text-align: end;
+    font-size: 0.8em;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.dropMenu #nom {
+    margin-right: 110px;
+    margin-bottom: 46px;
+}
+
+.dropMenu #pseudo {
+    margin-right: 110px;
+    margin-bottom: 75px;
+}
+
+.dropMenu #password {
+    margin-right: 110px;
+    margin-bottom: 70px;
+}
+
+.dropMenu input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 0.9em;
+}
+
+
+.dropMenu #bouton input {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #0064e7;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'Sansita', sans-serif;
+}
