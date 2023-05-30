@@ -21,9 +21,7 @@
 
         <div class="dropAction">
             
-            <div class="dropProfil">
-                <img id="btnProfil" src="assets/images/photo-profil.jpg" alt="photo de profil">
-            </div>
+            <?php include 'inscription.php'?>
 
         </div>
 

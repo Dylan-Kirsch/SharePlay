@@ -1,25 +1,18 @@
-/* ******************************** */
-
 .dropMenu {
     display: none;
-    width: 269%;
+    width: 208%;
     border-radius: 5px;
     box-shadow: 0px 7px 13px -4px #0000005c;
     background-color: #fff;
     text-align: start;
     position: relative;
-    right: 240px;
+    right: 124px;
     padding: 25px 20px;
 }
 
-.dropProfil #btnInscri {
-    font-size: 4em;
-    margin-top: 7px;
-}
+/* ******************* CONNECTION ******************** */
 
-/* ***************** INSCRIRE **************************** */
-
-.dropMenu #inscription {
+#connexion {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -33,42 +26,36 @@
     margin-bottom: 40px;
 }
 
-.dropMenu #seConnect {
+.dropMenu #inscrire {
     width: 100%;
     margin-bottom: 60px;
     height: 25px;
     text-align: end;
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: #000;
     border-bottom: 1px solid #000;
 }
 
-.dropMenu #nom {
-    margin-right: 110px;
-    margin-bottom: 46px;
-}
 
-.dropMenu #pseudo {
-    margin-right: 110px;
-    margin-bottom: 75px;
-}
-
-.dropMenu #password {
-    margin-right: 110px;
-    margin-bottom: 70px;
+.dropMenu #password, #identifiant{
+    width: 75%;
+    text-align: center;
+    margin-bottom: 83px;
 }
 
 .dropMenu input {
     border-top: none;
     border-right: none;
     border-left: none;
-    font-size: 0.9em;
 }
 
+.dropMenu #identifiant input, #password input {
+    width: 100%;
+}
 
 .dropMenu #bouton input {
     border: none;
-    padding: 5px 10px;
+    padding: 3px 8px;
     border-radius: 5px;
     background-color: #0064e7;
     color: #fff;

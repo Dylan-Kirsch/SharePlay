@@ -82,3 +82,15 @@ CREATE TABLE IF NOT EXISTS tag
     libelle VARCHAR(255) NOT NULL
 
 );
+
+CREATE TABLE IF NOT EXISTS utilisateur
+(
+
+    id INT primary key AUTO_INCREMENT,
+    nom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
+    pseudo VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    mot_de_passe VARCHAR(255) NOT NULL
+
+);
