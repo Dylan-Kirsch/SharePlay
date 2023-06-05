@@ -52,23 +52,18 @@
         {
 
             if (!(isset($pData['nom'])&& strlen($pData['nom']>3)))
-                return $nameErr = "Nom obligatoire";
 
 
                 if (!(isset($pData['prenom'])&& strlen($pData['prenom']>3)))
-                return $prenomErr = "Prenom obligatoire";
 
 
                 if (!(isset($pData['pseudo'])&& strlen($pData['pseudo']>3)))
-                return $pseudoErr = "Pseudo obligatoire";
 
 
                 if (!(isset($pData['email'])&& !filter_var($pData['email'], FILTER_VALIDATE_EMAIL)))
-                return $emailErr = "Email obligatoire ou format non valide";
 
 
                 if (!(isset($pData['mot_de_passe'])&& password_hash($pData['mot_de_passe'], PASSWORD_BCRYPT)))
-                return $motDePasseErr = "Mot de passe obligatoire";
 
                 
 
