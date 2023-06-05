@@ -10,7 +10,7 @@
             $listeGalerie = $reponse->getData();
             foreach ($listeGalerie as $galerie) 
             {
-
+                
                 include 'views\ajoutRecent.php';
 
             }
@@ -67,7 +67,7 @@
                 $jeu = JeuxDB::lister()->getData();
                 $univers = UniversDB::lister()->getData();
 
-            }
+            } 
                 
         }
     }

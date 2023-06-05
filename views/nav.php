@@ -18,10 +18,11 @@
 
         </div>
 
+        
 
         <div class="dropAction">
-            
-            <?php include 'inscription.php'?>
+              
+            <?php afficherUtilisateur()?>
 
         </div>
 

@@ -2,7 +2,9 @@
     <i id="btnInscri" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 
-<form action="">
+<?php inscription() ?>  
+
+<form method="POST">
     
     <div class="dropMenu">
 
@@ -15,28 +17,28 @@
             </a>
 
             <div id="nom">
-                <input type="text" name="nom" placeholder="Nom">
+                <input type="text" name="nom" placeholder="Nom" value="<?=isset($_POST['nom'])?$_POST['nom']:"";?>">
             </div>
 
             <div id="prenom">
-                <input type="text" name="prenom" placeholder="Prenom">
+                <input type="text" name="prenom" placeholder="Prenom" value="<?=isset($_POST['prenom'])?$_POST['prenom']:"";?>">
             </div>
             
             <div id="pseudo">
-                <input type="text" name="pseudo" placeholder="Pseudo">
+                <input type="text" name="pseudo" placeholder="Pseudo" value="<?=isset($_POST['pseudo'])?$_POST['pseudo']:"";?>">
             </div>
 
             <div id="email">
-                <input type="text" name="e-mail" placeholder="E-mail">
+                <input type="text" name="email" placeholder="E-mail" value="<?=isset($_POST['email'])?$_POST['email']:"";?>">
             </div>
 
             <div id="password">
-                <input type="password" name="password" placeholder="Mot de passe">
+                <input type="password" name="mot_de_passe" placeholder="Mot de passe" value="">
             </div>
 
-            <div id="verifPassword">
+            <!-- <div id="verifPassword">
                 <input type="password" name="verifPassword" placeholder="Confirmer mot de passe">
-            </div>
+            </div> -->
             
             <div id="bouton">
                 <input type="submit" value="S'inscrire">

@@ -13,19 +13,18 @@
 
         public string $email;
 
-        public string $motDePasse;
+        public $mot_de_passe;
 
 
 
-        public function __construct(int $pId, string $pNom, string $pPrenom, string $pPseudo, string $pEmail, string $pMotDePasse)
+        public function __construct(int $pId, string $pNom, string $pPrenom, string $pPseudo, string $pEmail, $pMot_de_passe)
         {
             $this->id = $pId;
             $this->nom = htmlentities($pNom);
             $this->prenom = htmlentities($pPrenom);
             $this->pseudo = htmlentities($pPseudo);
-            $this->email = htmlentities($pEmail);
-            $this->motDePasse = htmlentities($pMotDePasse);
-
+            $this->email = htmlentities(strtolower($pEmail));
+            $this->mot_de_passe = htmlentities($pMot_de_passe);
         }
 
 

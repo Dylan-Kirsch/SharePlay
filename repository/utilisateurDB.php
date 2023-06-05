@@ -16,18 +16,18 @@
 
                 foreach ($resultat as $key => $value) {
                     
-                    $news = new Utilisateur 
+                    $utilisateur = new Utilisateur 
                     (
                         $value['id'],
                         $value['nom'],
                         $value['prenom'],
                         $value['pseudo'],
                         $value['email'],
-                        $value['motDePasse']
+                        $value['mot_de_passe']
 
                     );
 
-                    $listeUtilisateur->append($news);
+                    $listeUtilisateur->append($utilisateur);
 
                 }
 
@@ -43,6 +43,56 @@
 
             }
 
+
+        }
+
+
+
+        static public function creerUser($pData):bool
+        {
+
+            if (!(isset($pData['nom'])&& strlen($pData['nom']>3)))
+                return $nameErr = "Nom obligatoire";
+
+
+                if (!(isset($pData['prenom'])&& strlen($pData['prenom']>3)))
+                return $prenomErr = "Prenom obligatoire";
+
+
+                if (!(isset($pData['pseudo'])&& strlen($pData['pseudo']>3)))
+                return $pseudoErr = "Pseudo obligatoire";
+
+
+                if (!(isset($pData['email'])&& !filter_var($pData['email'], FILTER_VALIDATE_EMAIL)))
+                return $emailErr = "Email obligatoire ou format non valide";
+
+
+                if (!(isset($pData['mot_de_passe'])&& password_hash($pData['mot_de_passe'], PASSWORD_BCRYPT)))
+                return $motDePasseErr = "Mot de passe obligatoire";
+
+                
+
+            try
+            {
+                
+                $stmt = Database::getInstance()->prepare("INSERT INTO UTILISATEUR (nom, prenom, pseudo, email, mot_de_passe)
+                VALUES(:nom, :prenom, :pseudo, :email, :mot_de_passe)");
+                
+                $stmt->bindValue(':nom',$pData['nom']);
+                $stmt->bindValue(':prenom',$pData['prenom']);
+                $stmt->bindValue(':pseudo',$pData['pseudo']);
+                $stmt->bindValue(':email',$pData['email']);
+                $stmt->bindValue(':mot_de_passe',$pData['mot_de_passe']);
+                
+
+                return $stmt->execute();
+            }
+
+            catch (PDOException $e)
+            {
+                echo $e->getMessage();
+                return false;
+            }
 
         }
     
