@@ -12,12 +12,14 @@
     require_once('repository\tagDB.php');
     require_once('repository\typeAffichageDB.php');
     require_once('repository\photoDB.php');
+    require_once('repository\utilisateurDB.php');
 
     require_once('controllers\accueil-controller.php');
     require_once('controllers\galerie-controller.php');
     require_once('controllers\jeux-controller.php');
     require_once('controllers\univers-controller.php');
     require_once('controllers\photo-controller.php');
+    require_once('controllers\utilisateur-controller.php');
 
     require_once('models\jeux.php');
     require_once('models\accueil.php');
@@ -26,7 +28,7 @@
     require_once('models\photo.php');
     require_once('models\tag.php');
     require_once('models\typeAffichage.php');
-
+    require_once('models\utilisateur.php');
 
     session_start(); 
     

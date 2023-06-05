@@ -21,7 +21,11 @@
 
         <div class="dropAction">
             
-            <?php include 'inscription.php'?>
+            <?php 
+            afficherUtilisateur();
+            include 'inscription.php';
+            
+            ?>
 
         </div>
 
