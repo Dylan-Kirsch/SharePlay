@@ -6,13 +6,13 @@
 
 .dropMenu {
     display: none;
-    width: 269%;
+    width: 218%;
     border-radius: 5px;
     box-shadow: 0px 7px 13px -4px #0000005c;
     background-color: #fff;
     text-align: start;
     position: relative;
-    right: 240px;
+    right: 143px;
     padding: 25px 20px;
 }
 
@@ -45,18 +45,21 @@
 }
 
 .dropMenu #nom {
-    margin-right: 110px;
+    margin-right: 17px;
     margin-bottom: 46px;
+    width: 50%;
 }
 
 .dropMenu #pseudo {
-    margin-right: 110px;
-    margin-bottom: 75px;
+    margin-right: 17px;
+    margin-bottom: 55px;
+    width: 50%;
 }
 
-.dropMenu #password {
+.dropMenu #motDePasse {
     margin-right: 110px;
     margin-bottom: 70px;
+    width: 50%;
 }
 
 .dropMenu input {

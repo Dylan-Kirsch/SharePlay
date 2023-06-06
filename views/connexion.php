@@ -2,7 +2,7 @@
     <i id="btnDrop" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 
-<form action="">
+<form action="" method="POST">
     
     <div class="dropMenu">
 

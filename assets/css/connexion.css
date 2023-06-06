@@ -5,13 +5,13 @@
 
 .dropMenu {
     display: none;
-    width: 208%;
+    width: 218%;
     border-radius: 5px;
     box-shadow: 0px 7px 13px -4px #0000005c;
     background-color: #fff;
     text-align: start;
     position: relative;
-    right: 124px;
+    right: 143px;
     padding: 25px 20px;
 }
 
@@ -42,7 +42,13 @@
 }
 
 
-.dropMenu #password, #identifiant{
+.dropMenu #identifiant{
+    width: 75%;
+    text-align: center;
+    margin-bottom: 83px;
+}
+
+.dropMenu #password{
     width: 75%;
     text-align: center;
     margin-bottom: 83px;

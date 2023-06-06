@@ -32,7 +32,7 @@
                 <input type="email" name="email" placeholder="E-mail" value="<?=isset($_POST['email'])?$_POST['email']:"";?>">
             </div>
 
-            <div id="password">
+            <div id="motDePasse">
                 <input type="password" name="mot_de_passe" placeholder="Mot de passe" value="<?=isset($_POST['mot_de_passe'])?$_POST['mot_de_passe']:"";?>">
             </div>
 

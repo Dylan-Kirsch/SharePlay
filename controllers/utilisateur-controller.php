@@ -10,7 +10,8 @@
             $listeUtilisateur = $reponse->getData();
             foreach ($listeUtilisateur as $utilisateur) 
             {
-                login();
+                include 'views\inscription.php';
+                // login();
             }
         } 
         else
