@@ -3,17 +3,17 @@
     class Utilisateur
     {
 // mettre en place l'encapsulation: $id ->$_id et en private
-        public int $id;
+        private int $id;
 
-        public string $nom;
+        private string $nom;
 
-        public string $prenom;
+        private string $prenom;
 
-        public string $pseudo;
+        private string $pseudo;
 
-        public string $email;
+        private string $email;
 
-        public string $mot_de_passe;
+        private string $mot_de_passe;
 
 
 

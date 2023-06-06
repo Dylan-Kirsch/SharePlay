@@ -61,7 +61,8 @@
                 return false;
                 if (!(isset($pData['mot_de_passe'])&& strlen($pData['mot_de_passe'])))
                 return false;
-
+            if (!filter_var($pData['email'], FILTER_VALIDATE_EMAIL))
+                return false;
             try
             {
                 
@@ -71,7 +72,7 @@
                 $stmt->bindValue(':nom',$pData['nom']);
                 $stmt->bindValue(':prenom',$pData['prenom']);
                 $stmt->bindValue(':pseudo',$pData['pseudo']);
-                $stmt->bindValue(':email', !filter_var($pData['email'], FILTER_VALIDATE_EMAIL));
+                $stmt->bindValue(':email', $pData['email']);
                 $stmt->bindValue(':mot_de_passe',password_hash($pData['mot_de_passe'], PASSWORD_BCRYPT));
 
                 return $stmt->execute();
@@ -83,6 +84,35 @@
                 return false;
             }
             
+        }
+
+        public static function checkLogin($email,$mot_de_passe)
+        {
+        try
+        {
+            $sql= "SELECT * from `utilisateur`where email like :email and mot_de_passe like :mot_de_passe;";
+            $db=DataBase::getInstance()->prepare($sql);
+            // les parties variables marquées par : sont remplacées grace a un tableau associatif!
+            // cela protège de l'injection SQL
+            $db->execute([
+                'email'=>$email,
+                'mot_de_passe'=>$mot_de_passe
+            ]);
+            $tuple = $db->fetch();
+            // var_dump($tuple);
+            if ($tuple)
+                {
+                    $utilisateur = new Utilisateur($tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],$tuple['id']);
+                    return $utilisateur;
+                }
+                else
+                return false;
+        }
+        catch (PDOException $exception) 
+        {
+            $msgErreur =$exception->getMessage();
+            require_once './views/errors/template-affichage-erreur.php';
+        } 
         }
     
     }

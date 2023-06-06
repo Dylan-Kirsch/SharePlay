@@ -29,7 +29,7 @@
             </div>
 
             <div id="email">
-                <input type="text" name="email" placeholder="E-mail" value="<?=isset($_POST['email'])?$_POST['email']:"";?>">
+                <input type="email" name="email" placeholder="E-mail" value="<?=isset($_POST['email'])?$_POST['email']:"";?>">
             </div>
 
             <div id="password">
