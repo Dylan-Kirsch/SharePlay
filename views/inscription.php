@@ -1,8 +1,11 @@
 <div class="dropProfil">
-    <i id="btnInscri" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
+    <i id="btnDrop" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 
-<?= inscription() ?>
+<?= 
+afficherUtilisateurNonConnecter();
+inscription(); 
+?>
 
 <form method="POST" >
     
@@ -12,7 +15,7 @@
 
             <h1>INSCRIPTION</h1>
             
-            <a id="seConnect" href="">
+            <a id="seConnect" href="views\connexion.php">
                 <p>Vous avez déjà un compte ?</p>
             </a>
 

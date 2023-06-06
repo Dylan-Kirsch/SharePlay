@@ -30,7 +30,8 @@
     require_once('models\typeAffichage.php');
     require_once('models\utilisateur.php');
 
-    session_start(); 
+    session_start();
+    
     
     if (isset($_GET['/']))
                 $accueil = $_GET['/'];

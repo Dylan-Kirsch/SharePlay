@@ -1,3 +1,8 @@
+.dropProfil #btnDrop {
+    width: 37%;
+    border-radius: 60px;
+}
+
 .dropMenu {
     display: none;
     width: 208%;

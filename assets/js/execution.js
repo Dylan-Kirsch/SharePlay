@@ -1,7 +1,7 @@
 
 let btnProfil = document.querySelector('#btnProfil');
 
-let btnInscri = document.querySelector('#btnInscri');
+let btnInscri = document.querySelector('#btnDrop');
 
 
 let btnCreerGalerie = document.querySelector('#navBtn');

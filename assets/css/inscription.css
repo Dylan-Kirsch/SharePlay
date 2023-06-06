@@ -1,4 +1,8 @@
 /* ******************************** */
+.dropProfil #btnDrop {
+    font-size: 4em;
+    margin-top: 7px;
+}
 
 .dropMenu {
     display: none;
@@ -12,10 +16,7 @@
     padding: 25px 20px;
 }
 
-.dropProfil #btnInscri {
-    font-size: 4em;
-    margin-top: 7px;
-}
+
 
 /* ***************** INSCRIRE **************************** */
 

@@ -31,11 +31,6 @@ body {
     justify-content: flex-end;
 }
 
-.dropProfil #btnProfil {
-    width: 37%;
-    border-radius: 60px;
-}
-
 #navBtn { 
     border-radius: 30px;
     background-color: #0064e7;

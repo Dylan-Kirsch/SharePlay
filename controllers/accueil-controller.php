@@ -45,8 +45,6 @@
     function afficherUneNews($pId)
     {
 
-        ob_start();
-
         $reponse = NewsDB::lire($pId);
 
         if ($reponse->isSuccessfull())
@@ -63,9 +61,7 @@
         }
         else
         include('views\afficherException.php');
-        
-        $carouselNews = ob_get_clean();
-        include 'views/layout.php';
+    
 
     }
 
