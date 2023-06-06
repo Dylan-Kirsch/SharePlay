@@ -22,8 +22,7 @@
         <div class="dropAction">
             
             <?php 
-            afficherUtilisateur();
-            
+                afficherUtilisateur();
             ?>
 
         </div>

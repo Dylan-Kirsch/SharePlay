@@ -10,8 +10,8 @@
             $listeUtilisateur = $reponse->getData();
             foreach ($listeUtilisateur as $utilisateur) 
             {
-                include 'views\inscription.php';
-                // login();
+                // include 'views\inscription.php';
+                login();
             }
         } 
         else
@@ -25,7 +25,7 @@
         $resultat = UtilisateurDB::creerUtilisateur($_POST);
 
         if ($resultat)
-            include 'views\galerieAjouter.php';
+            include 'views\utilisateurAjouter.php';
         else
         {
         
