@@ -1,5 +1,5 @@
 <div class="dropProfil">
-    <img id="btnDrop" src="assets/images/photo-profil.jpg" alt="photo de profil">
+    <i id="btnDrop" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 
 <form action="">

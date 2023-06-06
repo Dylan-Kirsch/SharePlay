@@ -2,10 +2,7 @@
     <i id="btnDrop" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 
-<?= 
-afficherUtilisateurNonConnecter();
-inscription(); 
-?>
+<?= inscription() ?>
 
 <form method="POST" >
     
@@ -15,7 +12,7 @@ inscription();
 
             <h1>INSCRIPTION</h1>
             
-            <a id="seConnect" href="views\connexion.php">
+            <a id="seConnect" href="">
                 <p>Vous avez déjà un compte ?</p>
             </a>
 

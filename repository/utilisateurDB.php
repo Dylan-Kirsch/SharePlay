@@ -86,33 +86,57 @@
             
         }
 
+
+// ************  LOGIN   **************
+
+
         public static function checkLogin($email,$mot_de_passe)
         {
-        try
-        {
-            $sql= "SELECT * from `utilisateur`where email like :email and mot_de_passe like :mot_de_passe;";
-            $db=DataBase::getInstance()->prepare($sql);
-            // les parties variables marquées par : sont remplacées grace a un tableau associatif!
-            // cela protège de l'injection SQL
-            $db->execute([
-                'email'=>$email,
-                'mot_de_passe'=>$mot_de_passe
-            ]);
-            $tuple = $db->fetch();
-            // var_dump($tuple);
-            if ($tuple)
-                {
-                    $utilisateur = new Utilisateur($tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],$tuple['id']);
-                    return $utilisateur;
-                }
-                else
-                return false;
+            try
+            {
+                $sql= "SELECT * from `utilisateur`where email like :email and mot_de_passe like :mot_de_passe;";
+                $db=DataBase::getInstance()->prepare($sql);
+                $db->execute([
+                    'email'=>$email,
+                    'mot_de_passe'=>$mot_de_passe
+                ]);
+                $tuple = $db->fetch();
+                if ($tuple)
+                    {
+                        $utilisateur = new Utilisateur($tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],$tuple['id']);
+                        return $utilisateur;
+                    }
+                    else
+                    return false;
+            }
+            catch (PDOException $exception) 
+            {
+                $msgErreur =$exception->getMessage();
+                require_once './views/errors/template-affichage-erreur.php';
+            } 
         }
-        catch (PDOException $exception) 
+
+
+// **************   TOKEN   ******************
+
+
+        public static function getCSRFToken()
         {
-            $msgErreur =$exception->getMessage();
-            require_once './views/errors/template-affichage-erreur.php';
-        } 
+            if (empty($_SESSION['csrftoken'])) {
+                $_SESSION['csrftoken'] = bin2hex(openssl_random_pseudo_bytes(32));
+            }
+            return $_SESSION['csrftoken'];
+        }
+
+        public static function checkCSRFToken()
+        {
+            return (isset($_POST['csrftoken'])&&($_SESSION['csrftoken']==$_POST['csrftoken']));
+        }
+
+        public static function render(String $vue,Array $data=[])
+        {
+            $token =  $_SESSION['csrftoken'];
+            require_once $vue;
         }
     
     }

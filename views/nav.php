@@ -23,7 +23,6 @@
             
             <?php 
             afficherUtilisateur();
-            include 'inscription.php';
             
             ?>
 
