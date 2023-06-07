@@ -1,6 +1,6 @@
 
 <div class="card">
-    <a href="index.php?/=carousel-3D">
+    <a href="index.php?page=carousel-3D">
         <img src="assets/images/jeux/dead-island-2.jpg">
     
         <div class="overley1 card-img-overlay d-flex flex-column justify-content-between">

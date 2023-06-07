@@ -1,4 +1,5 @@
-function toggleProfil() {
+
+function toggleDrop() {
     let profil = document.querySelector('.dropMenu');
     let nomSite = document.querySelector('#nomSite');
     let nav = document.querySelector('#navbar');
@@ -40,5 +41,9 @@ function toggleCreerGalerie() {
         nav.style.backgroundColor = "#fff";
         console.log('visible');
     }
+
+
+
+
     
 }

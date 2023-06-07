@@ -21,11 +21,20 @@
 
         <div class="dropAction">
             
-            <?php 
-                afficherUtilisateur();
-            ?>
+         <?php
+ if (AccueilController::isNotConnected())
+  UtilisateurController::afficherFormulaireInscription();
+  else
+{?>
+    <?=$_SESSION['pseudo']?>
+    <a href="index.php?page=logout"> deconnexion</a>
+<?php
+}
+?>
+  
+
+         
 
         </div>
-
 
     </nav>

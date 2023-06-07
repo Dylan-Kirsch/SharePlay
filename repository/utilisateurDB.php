@@ -16,7 +16,7 @@
 
                 foreach ($resultat as $key => $value) {
                     
-                    $news = new Utilisateur 
+                    $utilisateur = new Utilisateur 
                     (
                         $value['id'],
                         $value['nom'],
@@ -27,7 +27,7 @@
 
                     );
 
-                    $listeUtilisateur->append($news);
+                    $listeUtilisateur->append($utilisateur);
 
                 }
 
@@ -94,16 +94,16 @@
         {
             try
             {
-                $sql= "SELECT * from `utilisateur`where email like :email and mot_de_passe like :mot_de_passe;";
+           
+                $sql= "SELECT * from `utilisateur`where email like :email";
                 $db=DataBase::getInstance()->prepare($sql);
                 $db->execute([
-                    'email'=>$email,
-                    'mot_de_passe'=>$mot_de_passe
+                    'email'=>$email
                 ]);
                 $tuple = $db->fetch();
-                if ($tuple)
+                if ($tuple && password_verify($mot_de_passe, $tuple['mot_de_passe']))
                     {
-                        $utilisateur = new Utilisateur($tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],$tuple['id']);
+                        $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe']);
                         return $utilisateur;
                     }
                     else
@@ -117,27 +117,9 @@
         }
 
 
-// **************   TOKEN   ******************
 
 
-        public static function getCSRFToken()
-        {
-            if (empty($_SESSION['csrftoken'])) {
-                $_SESSION['csrftoken'] = bin2hex(openssl_random_pseudo_bytes(32));
-            }
-            return $_SESSION['csrftoken'];
-        }
 
-        public static function checkCSRFToken()
-        {
-            return (isset($_POST['csrftoken'])&&($_SESSION['csrftoken']==$_POST['csrftoken']));
-        }
-
-        public static function render(String $vue,Array $data=[])
-        {
-            $token =  $_SESSION['csrftoken'];
-            require_once $vue;
-        }
     
     }
 

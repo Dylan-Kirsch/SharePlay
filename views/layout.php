@@ -31,8 +31,29 @@
 <body>
 
         <?php include 'views/nav.php' ?>
-
-
+        
+        <?php 
+        if (isset($_SESSION['message']))
+        {
+            ?>
+        <div class="bg-notice">
+            <?=$_SESSION['message']?>
+        </div>
+        <?php
+        unset($_SESSION['message']);
+        }
+        ?>
+<?php 
+        if (isset($_SESSION['error']))
+        {
+            ?>
+        <div class="bg-notice">
+            <?=$_SESSION['error']?>
+        </div>
+        <?php
+        unset($_SESSION['error']);
+        }
+        ?>
         <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">   
             <div class="carousel-inner">
                 <?=$carouselNews?>

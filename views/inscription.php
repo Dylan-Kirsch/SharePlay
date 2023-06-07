@@ -2,14 +2,35 @@
     <i id="btnDrop" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 
-<?= inscription() ?>
-
-<form method="POST" >
     
     <div class="dropMenu">
 
-        <div id="inscription">
+        <div id="connexion">
+        <form method="POST" action="index.php?page=login" >
+            <h1>Connexion</h1>
+    
+            <a id="inscrire" href="">
+                <p>Vous avez pas de compte ? inscrivez-vous </p>
+            </a>
 
+            <div id="identifiant">
+                <input type="text" name="email" placeholder="E-Mail" value="<?=isset($_POST['email'])?$_POST['email']:"";?>">
+            </div>
+
+            <div id="password">
+                <input type="password" name="password" placeholder="Mot de passe"  value="<?=isset($_POST['mot_de_passe'])?$_POST['mot_de_passe']:"";?>">
+            </div>
+
+            
+            <div id="bouton">
+                <input type="submit" value="Se connecter">
+            </div>
+            <input type="hidden" name="csrftoken" value="<?=$token?>">
+            </form>
+        </div>
+
+        <div id="inscription">
+        <form method="POST" action="index.php?page=subscribe" >
             <h1>INSCRIPTION</h1>
             
             <a id="seConnect" href="">
@@ -43,8 +64,8 @@
             <div id="bouton">
                 <input type="submit" value="S'inscrire">
             </div>
-
+            <input type="hidden" name="csrftoken" value="<?=$token?>">
+            </form>
         </div>
     </div>
 
-</form>

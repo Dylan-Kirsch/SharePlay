@@ -1,19 +1,8 @@
-
-let btnProfil = document.querySelector('#btnProfil');
-
-let btnInscri = document.querySelector('#btnDrop');
-
+let btnDrop = document.querySelector('#btnDrop');
+btnDrop.addEventListener('click', toggleDrop);
 
 let btnCreerGalerie = document.querySelector('#navBtn');
 btnCreerGalerie.addEventListener('click', toggleCreerGalerie);
 
-
-if (btnProfil == true) {
-    btnProfil.addEventListener('click', toggleProfil);
-}
-else
-{
-    btnInscri.addEventListener('click', toggleProfil);
-}
 
 

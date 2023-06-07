@@ -2,6 +2,8 @@
 
     require_once('config\config.php');
 
+
+
     require_once('repository\database.php');
     require_once('repository\reponse.php');
 
@@ -14,6 +16,7 @@
     require_once('repository\photoDB.php');
     require_once('repository\utilisateurDB.php');
 
+    require_once('controllers\controller.php');
     require_once('controllers\accueil-controller.php');
     require_once('controllers\galerie-controller.php');
     require_once('controllers\jeux-controller.php');
@@ -33,20 +36,28 @@
     session_start();
     
     
-    if (isset($_GET['/']))
-                $accueil = $_GET['/'];
+    if (isset($_GET['page']))
+                $accueil = $_GET['page'];
             else
                 $accueil = 'news';
     
     switch($accueil)
     {
-
+        case 'subscribe':
+            UtilisateurController::inscription();
+            break;
+        case 'login':
+            UtilisateurController::login();
+            break;
+            case 'logout':
+                UtilisateurController::logout();
+                break;
         case 'news':
 
             if (isset($_GET['id'])) 
-                afficherUneNews($_GET['id']);
+                AccueilController::afficherUneNews($_GET['id']);
             else
-                afficherNews();
+                AccueilController::afficherNews();
             break;
 
         case 'carousel-3D':
@@ -55,7 +66,7 @@
 
             break;
 
-        default: afficherNews();
+        default: AccueilController::afficherNews();
             
 
     }

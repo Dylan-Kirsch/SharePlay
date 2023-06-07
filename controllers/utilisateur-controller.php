@@ -1,56 +1,84 @@
 <?php 
-
-    function afficherUtilisateur()
+class UtilisateurController extends Controller
+{
+    public static function afficherUtilisateur()
     {
-
+       
         $reponse = UtilisateurDB::lister();
-
         if ($reponse->isSuccessfull())
         {
             $listeUtilisateur = $reponse->getData();
+            // var_dump($listeUtilisateur);
             foreach ($listeUtilisateur as $utilisateur) 
             {
-                // include 'views\inscription.php';
-                login();
+                include 'views\inscription.php';
             }
         } 
         else
         include('views\afficherException.php');
-
+        
     }
 
-    function inscription()
-    {
-        
-        $resultat = UtilisateurDB::creerUtilisateur($_POST);
 
-        if ($resultat)
-            include 'views\utilisateurAjouter.php';
+    public static function afficherFormulaireInscription()
+    {//affichage du formulaire => il faut générer le token CRSF
+
+        $token = UtilisateurController::getCSRFToken();
+        include 'views\inscription.php';
+
+    }
+    public static function afficherFormulaireConnexion()
+    {//affichage du formulaire => il faut générer le token CRSF
+
+        $token = UtilisateurController::getCSRFToken();
+        include 'views\connexion.php';
+ 
+    }
+
+
+    public static function inscription()
+    {
+        // Les tests de garde sont réalisés dans UtilisateurDB::creerUtilisateur()
+        if (UtilisateurController::checkCSRFToken())
+        {
+            $resultat = UtilisateurDB::creerUtilisateur($_POST);
+            if ($resultat)
+            {
+                $_SESSION['message']='views\success\utilisateurAjouter.php';
+                header('Location: index.php');
+            }
+                
+            else
+              {
+                $_SESSION['error']='views\afficherException.php';
+                header('Location: index.php');
+              } 
+        }
         else
         {
-        
 
-        } 
-                
-    
+                $_SESSION['error']='SECURITY ISSUE';
+                header('Location: index.php');
+        }
+                     
     }
 
 
 
-    function login()
+    public static function login()
     {
-
-        if ((!isset($_POST['email'])||(!isset($_POST['mot_de_passe']))))
+        if ((!isset($_POST['email'])||(!isset($_POST['password']))))
             require_once 'views/connexion.php';
         else
         {
-            $userConnected = utilisateurDB::checkLogin($_POST['email'],$_POST['mot_de_passe']);
+            $userConnected = utilisateurDB::checkLogin($_POST['email'],$_POST['password']);
             if ($userConnected)
             {
                 $_SESSION['isConnected']=true;
                 $_SESSION['userID']= $userConnected->getId();
-                // $_SESSION['isAdmin']= $userConnected->isAdmin();
-                $_SESSION['pseudo']= $userConnected->pseudo;
+                $_SESSION['pseudo']= $userConnected->getPseudo();
+                $_SESSION['message']='Bienvenue '. $userConnected->getPseudo();
+                header('Location: index.php');
                
             }
             else
@@ -60,17 +88,18 @@
 
         }
     }
-    function logout()
+    public static function logout()
     {
+        $_SESSION['message']='Au revoir '. $_SESSION['pseudo'];
         unset( $_SESSION['isConnected']);
         unset( $_SESSION['userID']);
         // unset( $_SESSION['isAdmin']);
         unset( $_SESSION['pseudo']);
+        header('Location: index.php');
         
-            require_once 'views/connexion.php';
     }
 
-
+}
 
 
 

@@ -49,6 +49,12 @@
 
     function ajouterGalerie()
     {
+        if (AccueilController::isNotConnected())
+        {
+            $_SESSION['message']='Il faut être connecté';
+            header('Location: index.php');
+        }
+        // $_SESSION['userID'] -> contient l'id de l'utilisateur connecté
     
         if (count($_POST)==0)
         {
@@ -58,10 +64,11 @@
         }
         else
         {   
-        
+    
+           
             $resultat = GalerieDB::creer($_POST) && TagDB::creer($_POST);
             if ($resultat)
-                include 'views\galerieAjouter.php';
+                include 'views\success\galerieAjouter.php';
             else
             {
                 $jeu = JeuxDB::lister()->getData();

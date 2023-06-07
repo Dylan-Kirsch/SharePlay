@@ -1,11 +1,11 @@
 <?php
 
-
-    function afficherNews()
+class AccueilController extends Controller
+{
+    public static function afficherNews()
     {
         
         ob_start();
-
         $reponse = NewsDB::lister();
         $listeJeux = JeuxDB::lister();
         $listeUnivers = UniversDB::lister();
@@ -40,9 +40,7 @@
         include 'views/layout.php';
 
     }
-
-
-    function afficherUneNews($pId)
+    public static function afficherUneNews($pId)
     {
 
         $reponse = NewsDB::lire($pId);
@@ -62,8 +60,10 @@
         else
         include('views\afficherException.php');
     
-
     }
+    
+}
+    
 
     
 
