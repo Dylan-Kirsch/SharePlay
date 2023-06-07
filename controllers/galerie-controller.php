@@ -49,11 +49,7 @@
 
     function ajouterGalerie()
     {
-        if (AccueilController::isNotConnected())
-        {
-            $_SESSION['message']='Il faut être connecté';
-            header('Location: index.php');
-        }
+      
         // $_SESSION['userID'] -> contient l'id de l'utilisateur connecté
     
         if (count($_POST)==0)
@@ -65,7 +61,11 @@
         else
         {   
     
-           
+            if (AccueilController::isNotConnected())
+            {
+                $_SESSION['message']='Il faut être connecté';
+                header('Location: index.php');
+            }
             $resultat = GalerieDB::creer($_POST) && TagDB::creer($_POST);
             if ($resultat)
                 include 'views\success\galerieAjouter.php';

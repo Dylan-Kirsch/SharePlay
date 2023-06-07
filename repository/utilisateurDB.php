@@ -112,7 +112,7 @@
             catch (PDOException $exception) 
             {
                 $msgErreur =$exception->getMessage();
-                require_once './views/errors/template-affichage-erreur.php';
+                require_once './views/errors/template-affichage.php';
             } 
         }
 
