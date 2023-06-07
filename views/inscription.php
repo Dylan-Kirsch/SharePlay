@@ -5,9 +5,12 @@
     
     <div class="dropMenu">
 
-        <div id="connexion">
+<!-- connexion -->
 
-            <form method="POST" action="index.php?page=login" >
+        <form method="POST" action="index.php?page=login" >
+
+            <div id="connexion">
+
                 <h1>Connexion</h1>
         
                 <span id="inscrire">
@@ -27,14 +30,17 @@
                     <input type="submit" value="Se connecter">
                 </div>
                 <input type="hidden" name="csrftoken" value="<?=$token?>">
-            </form>
+            </div>
 
-        </div>
+        </form>
 
-        <div id="inscription">
+<!-- INSCRIPTION -->
+        
+        <form method="POST" action="index.php?page=subscribe" >
 
-            <form method="POST" action="index.php?page=subscribe" >
-                <h1>INSCRIPTION</h1>
+            <div id="inscription">
+
+                <h1>Inscription</h1>
                 
                 <span id="seConnecter">
                     <p>Vous avez déjà un compte ?</p>
@@ -64,8 +70,11 @@
                     <input type="submit" value="S'inscrire">
                 </div>
                 <input type="hidden" name="csrftoken" value="<?=$token?>">
-            </form>
 
-        </div>
+            </div>
+
+        </form>
+
+        
     </div>
 

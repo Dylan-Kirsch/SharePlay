@@ -34,13 +34,12 @@
     margin-bottom: 40px;
 }
 
-.dropMenu #seConnect {
-    width: 100%;
-    margin-bottom: 60px;
-    height: 25px;
-    text-align: end;
+#seConnecter {
     font-size: 0.8em;
-    color: #000;
+    width: 100%;
+    height: 21px;
+    margin-bottom: 45px;
+    text-align: end;
     border-bottom: 1px solid #000;
 }
 
