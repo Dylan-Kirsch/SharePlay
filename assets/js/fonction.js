@@ -1,5 +1,6 @@
 
-function toggleDrop() {
+function toggleDrop() 
+{
     let profil = document.querySelector('.dropMenu');
     let nomSite = document.querySelector('#nomSite');
     let nav = document.querySelector('#navbar');
@@ -23,7 +24,9 @@ function toggleDrop() {
 
 
 
-function toggleCreerGalerie() {
+function toggleCreerGalerie() 
+{
+
     let galerie = document.querySelector('#dropCreer');
     let nav = document.querySelector('#navbar');
 
@@ -41,9 +44,28 @@ function toggleCreerGalerie() {
         nav.style.backgroundColor = "#fff";
         console.log('visible');
     }
+ 
+}
 
 
+function hiddenForm()
+{
+
+    let inscription = document.querySelector('#inscription');
+    let connexion = document.querySelector('#connexion');
+
+    if (connexion.style.display == "none") 
+    {
+        connexion.style.display = "flex";
+        inscription.style.display = "none";
+        console.log('pas caché');
+    }
+    else
+    {
+        connexion.style.display = "none"
+        inscription.style.display = "flex";
+        console.log('caché');
+    }
 
 
-    
 }

@@ -10,9 +10,9 @@
             <form method="POST" action="index.php?page=login" >
                 <h1>Connexion</h1>
         
-                <a id="inscrire" href="">
+                <span id="inscrire">
                     <p>Vous avez pas de compte ? inscrivez-vous </p>
-                </a>
+                </span>
 
                 <div id="identifiant">
                     <input type="text" name="email" placeholder="E-Mail" value="<?=isset($_POST['email'])?$_POST['email']:"";?>">
@@ -32,13 +32,13 @@
         </div>
 
         <div id="inscription">
-            
+
             <form method="POST" action="index.php?page=subscribe" >
                 <h1>INSCRIPTION</h1>
                 
-                <a id="seConnect" href="">
+                <span id="seConnecter">
                     <p>Vous avez déjà un compte ?</p>
-                </a>
+                </span>
 
                 <div id="nom">
                     <input type="text" name="nom" placeholder="Nom" value="<?=isset($_POST['nom'])?$_POST['nom']:"";?>">
