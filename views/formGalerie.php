@@ -67,6 +67,8 @@
             </select>
         </div> -->
 
+        <input type="hidden" name="idUser" value="<?=isset($_POST['idUser'])?$_POST['idUser']:$_SESSION['userID']?>" >
+
         <div class="btnValider">
             <input type="submit" name="creer" value="valider">
         </div>

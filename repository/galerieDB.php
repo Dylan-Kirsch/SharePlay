@@ -14,7 +14,7 @@
                                                         FROM GALERIE ,JEU, UNIVERS, UTILISATEUR
                                                         WHERE JEU.ID = GALERIE.num_jeu
                                                         AND UNIVERS.ID = GALERIE.num_univers
-                                                        AND UTILISATEUR.ID = GALERIE.numutilisateur;");
+                                                        AND UTILISATEUR.ID = GALERIE.num_utilisateur;");
 
                 $resultat = $stmt->fetchall();
                 $listeGalerie = new ArrayObject();
