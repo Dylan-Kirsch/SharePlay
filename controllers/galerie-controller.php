@@ -66,15 +66,21 @@
                 $_SESSION['message']='Il faut être connecté';
                 header('Location: index.php');
             }
-            $resultat = GalerieDB::creer($_POST) && TagDB::creer($_POST);
-            if ($resultat)
-                include 'views\success\galerieAjouter.php';
-            else
+            else if (AccueilController::isConnected())
             {
-                $jeu = JeuxDB::lister()->getData();
-                $univers = UniversDB::lister()->getData();
+                $resultat = GalerieDB::creer($_POST) && TagDB::creer($_POST);
+                
+                if ($resultat)
+                    include 'views\success\galerieAjouter.php';
+                else
+                {
+                    $jeu = JeuxDB::lister()->getData();
+                    $univers = UniversDB::lister()->getData();
+
+                }
 
             }
+            
                 
         }
     }

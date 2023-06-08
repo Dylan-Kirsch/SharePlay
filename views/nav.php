@@ -26,8 +26,9 @@
                 UtilisateurController::afficherFormulaireInscription();
                 else
             {?>
-                <?=$_SESSION['pseudo']?>
-                <a href="index.php?page=logout">Deconnexion</a>
+                
+                <?php include 'profil.php';?>
+
             <?php
                 }
             ?>

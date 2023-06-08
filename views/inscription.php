@@ -1,4 +1,4 @@
-<div class="dropProfil">
+<div id="connectInscri" class="dropProfil">
     <i id="btnDrop" class="fa-solid fa-circle-user" style="color: #a6a6a6;"></i>
 </div>
 

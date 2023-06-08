@@ -26,9 +26,16 @@ body {
     width: 19%;
 }
 
-.dropProfil {
+#connectInscri {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+
+#leProfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #navBtn { 
@@ -45,6 +52,18 @@ body {
     width: 13%;
     height: 13vh;
     margin-right: 4%;
+}
+
+.dropMenu {
+    display: none;
+    width: 218%;
+    border-radius: 5px;
+    box-shadow: 0px 7px 13px -4px #0000005c;
+    background-color: #fff;
+    text-align: start;
+    position: relative;
+    right: 143px;
+    padding: 25px 20px;
 }
 
 
@@ -185,16 +204,6 @@ body {
     font-family: 'Sansita', sans-serif;
     font-weight: 600;
 }
-
-
-
-
-/* ******* PROFIL ****************** */ 
-
-#profil {
-    background-color: #fff;
-}
-
 
 
 /* ******* CAROUSEL ************ */

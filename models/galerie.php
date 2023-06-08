@@ -15,8 +15,10 @@
 
         // public TypeAffichage $typeAffichage;
 
+        public Utilisateur $utilisateur;
 
-        public function __construct($pId, Jeux $pJeux, Univers $pUnivers)
+
+        public function __construct($pId, Jeux $pJeux, Univers $pUnivers, Utilisateur $pUtilisateur)
         {
 
             $this->id = $pId;
@@ -25,6 +27,7 @@
             // $this->tag = $pTag;
             // $this->photo = $pPhoto;
             // $this->typeAffichage = $pTypeAffichage;
+            $this->utilisateur = $pUtilisateur;
         }
 
 

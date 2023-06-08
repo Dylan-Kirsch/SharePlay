@@ -133,10 +133,11 @@ CREATE TABLE IF NOT EXISTS galerie
     num_photo int NOT NULL,
     num_tag int NOT NULL,
     num_type_affichage int NOT NULL,
+    num_utilisateur int NOT NULL,
     FOREIGN KEY (num_jeu) REFERENCES jeu(id),
     FOREIGN KEY (num_univers) REFERENCES univers (id),
     -- FOREIGN KEY (num_type_affichage) REFERENCES type_affichage (id),
     -- FOREIGN KEY (num_photo) REFERENCES photo (id),
     -- FOREIGN KEY (num_tag) REFERENCES tag (id)
-
+    -- FOREIGN KEY (num_utilisateur) REFERENCES utilisateur (id)
 );

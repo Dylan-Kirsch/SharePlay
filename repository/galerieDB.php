@@ -10,10 +10,11 @@
             {
             
                 $stmt = Database::getInstance()->query("SELECT *, 
-                                                        galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers'
-                                                        FROM GALERIE,JEU,UNIVERS
+                                                        galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers', utilisateur.id as 'iduser'
+                                                        FROM GALERIE ,JEU, UNIVERS, UTILISATEUR
                                                         WHERE JEU.ID = GALERIE.num_jeu
-                                                        AND UNIVERS.ID = GALERIE.num_univers;");
+                                                        AND UNIVERS.ID = GALERIE.num_univers
+                                                        AND UTILISATEUR.ID = GALERIE.numutilisateur;");
 
                 $resultat = $stmt->fetchall();
                 $listeGalerie = new ArrayObject();
@@ -47,6 +48,16 @@
                     //     $value['types']
                     // );
 
+                    $utilisateur = new Utilisateur(
+                        $value['id'],
+                        $value['nom'],
+                        $value['prenom'],
+                        $value['pseudo'],
+                        $value['email'],
+                        $value['mot_de_passe']
+                    );
+
+
                     $galerie = new Galerie(
                         $value['id'],
                         $jeux,
@@ -54,6 +65,7 @@
                         // $tag,
                         // $photo,
                         // $typeAffichage
+                        $utilisateur
                     );
 
                     
@@ -165,16 +177,19 @@
                 return false;
                 // if (!(isset($pData['idTag'])&& is_numeric($pData['idTag'])))
                 // return false;
+                if (!(isset($pData['idUser'])&& is_numeric($pData['idUser'])))
+                return false;
 
             try
             {
                 
-                $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers)
-                VALUES(:idJeu, :idUnivers)");
+                $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers, num_utilisateur)
+                VALUES(:idJeu, :idUnivers, :idUser)");
                 
                 $stmt->bindValue(':idJeu',$pData['idJeu']);
                 $stmt->bindValue(':idUnivers',$pData['idUnivers']);
                 // $stmt->bindValue(':idTag',$pData['idTag']);
+                $stmt->bindValue(':idUser',$pData['idUser']);
 
                 return $stmt->execute();
             }
