@@ -8,7 +8,7 @@
         <div id="choixJeux">
             <h1>Choisir un jeu ou un univers de jeu</h1>
 
-            <div class="jeux">
+            <div id="jeux">
                 <label for="jeux">Jeux</label>
 
                 <select id="Jeu" name="idJeu">

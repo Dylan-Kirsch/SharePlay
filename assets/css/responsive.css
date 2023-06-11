@@ -1,0 +1,104 @@
+@media screen and (max-width: 1024px) {
+
+    .dropProfil #btnDrop {
+        width: 13%;
+        font-size: 3.6em;
+    }
+    
+/* CONNEXION  */
+    
+    .dropMenu {
+        width: 262%;
+    }
+
+    .dropMenu h1 {
+        font-size: 2em;
+    }
+
+    .dropMenu #inscrire {
+        margin-bottom: 32px;
+    }
+
+    .dropMenu #identifiant {
+        margin-bottom: 45px;
+    }
+
+    .dropMenu #password {
+        margin-bottom: 57px;
+    }
+
+    .dropMenu #bouton input {
+        font-size: 1.2em;
+    }
+
+/* INSCRIPTION */
+
+    #seConnecter {
+        font-size: 0.7em;
+    }
+
+    #inscription #nom {
+        margin: 0 10px 30px 17px;
+    }
+
+    #inscription #nom, #prenom, #email {
+        width: 45%;
+    }
+
+    #inscription #pseudo {
+        width: 45%;
+        margin: 0 10px 40px 17px;
+    }
+
+    #inscription #nom input, #prenom input, #pseudo input, #email input {
+        font-size: 0.8em;
+        width: 85%;
+    }
+
+    #inscription #motDePasse {
+        margin-bottom: 63px;
+        width: 12%;
+    }
+
+    #inscription #motDePasse input {
+        font-size: 0.8em;
+    }
+
+    #inscription #bouton {
+        width: 100%;
+        text-align: center;
+    }
+
+/* CREER GALERIE */
+
+    .titre h1 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    #choixJeux h1 {
+        font-size: 1.1em;
+    }
+
+    #jeux {
+        margin-bottom: 15px;
+    }
+
+    #jeux label, .univers label {
+        font-size: 0.9em;
+    }
+
+    #Jeu, #univers {
+        width: 68%;
+        font-size: 0.9em;
+    }
+
+
+
+
+
+
+
+
+
+}
