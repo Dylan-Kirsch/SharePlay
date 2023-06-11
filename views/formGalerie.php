@@ -56,16 +56,16 @@
             <h1>Ajouter une image</h1>
             <span>jpg, png 5Mo max - 5 images max</span>
         </div>  -->
+        
+        <!-- <div class="choixGalerie">
+            <label for="typeGaleries">Choisir le type de galerie</label>
 
-        <!-- <div id="choixGalerie">
-            <h1>Choisir le type de galerie</h1>
+            <select id="typeGaleries" name="idType">
 
-            <select id="typeGaleries" name="typeGaleries">
-                <option value="Classique">Classique</option>
-                <option value="3D">3D</option>
-                <option value="Autre">Autre</option>
+
             </select>
-        </div> -->
+        </div>   -->
+
 
         <input type="hidden" name="idUser" value="<?=isset($_POST['idUser'])?$_POST['idUser']:$_SESSION['userID']?>" >
 

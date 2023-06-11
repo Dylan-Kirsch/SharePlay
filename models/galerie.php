@@ -18,7 +18,7 @@
         public Utilisateur $utilisateur;
 
 
-        public function __construct($pId, Jeux $pJeux, Univers $pUnivers, Utilisateur $pUtilisateur)
+        public function __construct($pId, Jeux $pJeux, Univers $pUnivers, Utilisateur $pUtilisateur )
         {
 
             $this->id = $pId;

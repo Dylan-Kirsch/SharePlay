@@ -56,7 +56,6 @@
         {
             $jeu = JeuxDB::lister()->getData();
             $univers = UniversDB::lister()->getData();
-            
         }
         else
         {   

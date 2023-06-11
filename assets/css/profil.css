@@ -2,6 +2,12 @@
     flex-wrap: wrap;
 }
 
+#leProfil span {
+    color: #fff;
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.3em;
+}
+
 #profil img {
     width: 19%;
     height: fit-content;

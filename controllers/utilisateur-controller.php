@@ -11,7 +11,7 @@ class UtilisateurController extends Controller
             // var_dump($listeUtilisateur);
             foreach ($listeUtilisateur as $utilisateur) 
             {
-                // include 'views\inscription.php';
+                
             }
         } 
         else

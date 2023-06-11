@@ -46,6 +46,7 @@
                     // $typeAffichage = new TypeAffichage(
                     //     $value['id'],
                     //     $value['types']
+                    //     $value[''libelle]
                     // );
 
                     $utilisateur = new Utilisateur(

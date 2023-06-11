@@ -21,9 +21,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sansita:wght@700&display=swap" >
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
     <script src="assets\js\fonction.js"></script>
     <script src="assets\js\execution.js" defer></script>
+    <script src="assets\js\carouselAjout.js "defer></script>
 
     <title>SharePlay</title>
 
@@ -71,13 +73,15 @@
 
     <h1 class="ajout px-4">Ajout récent</h1>
      
-     <div id="list">
+    <div id="list">
+        
+        <div class="itemRecent">
+
+            <?php afficherGalerie(); ?>
+            
+        </div>
      
-        
-        <?php afficherGalerie(); ?>
-        
-         
-     </div>
+    </div>
         
 
     </section>

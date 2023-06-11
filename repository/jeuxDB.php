@@ -12,7 +12,7 @@
                 $stmt = Database::getInstance()->query("SELECT * from JEU;");
                 $resultat = $stmt->fetchall();
                 $listeJeux = new ArrayObject();
-
+                
                 foreach ($resultat as $key => $value) {
 
                     $jeux = new Jeux(

@@ -1,6 +1,6 @@
 
 <div id="leProfil" class="dropProfil">
-    <?=$_SESSION['pseudo']?>
+    <span> <?=$_SESSION['pseudo']?> </span>
     <img id="btnDrop" src="assets/images/photo-profil.jpg" alt="photo de profil">
 </div>
 

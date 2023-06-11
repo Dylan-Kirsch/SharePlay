@@ -13,14 +13,17 @@
                 $resultat = $stmt->fetchall();
                 $listeTypeAffichage = new ArrayObject();
 
+                
+
                 foreach ($resultat as $key => $value) {
 
-                    $typeAffichage = new TypeAffichage(
+                    $type_Affichage = new TypeAffichage(
                         $value['id'],
-                        $value['types']
+                        $value['types'],
+                        $value['libelle']
                     );
                 
-                    $listeTypeAffichage->append($typeAffichage);
+                    $listeTypeAffichage->append($type_Affichage);
 
                 }
 

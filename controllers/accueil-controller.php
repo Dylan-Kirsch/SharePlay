@@ -9,6 +9,8 @@ class AccueilController extends Controller
         $reponse = NewsDB::lister();
         $listeJeux = JeuxDB::lister();
         $listeUnivers = UniversDB::lister();
+        
+
         if ($reponse->isSuccessfull())
         {
             $listeNews = $reponse->getData();
