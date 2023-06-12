@@ -116,6 +116,26 @@
             } 
         }
 
+        public static function load($id)
+        {
+            try
+            {
+                $sql= "SELECT * FROM `utilisateur` where ID=:id;";
+                $db=DataBase::getInstance()->prepare($sql);
+
+                $db->execute(['id'=>$id]);
+
+                $tuple =$db->fetch();
+                $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],$tuple['admin']);
+                return $utilisateur;
+            }
+            catch (PDOException $exception) 
+            {
+                $msgErreur =$exception->getMessage();
+                require_once './views/errors/template_affichage_error.php';
+            } 
+        }
+
 
 
 

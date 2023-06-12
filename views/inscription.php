@@ -5,7 +5,7 @@
     
     <div class="dropMenu">
 
-<!-- connexion -->
+<!-- CONNEXION -->
 
         <form method="POST" action="index.php?page=login" >
 

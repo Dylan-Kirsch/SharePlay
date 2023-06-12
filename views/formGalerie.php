@@ -72,6 +72,9 @@
         <div class="btnValider">
             <input type="submit" name="creer" value="valider">
         </div>
+
+        <input type="hidden" name="csrftoken" value="<?=$token?>">
+
     </div>
 
 </form>

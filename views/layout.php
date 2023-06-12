@@ -75,13 +75,9 @@
     <h1 class="ajout px-4">Ajout récent</h1>
      
     <div id="list">
-        
-        
-
+  
         <?php afficherGalerie(); ?>
-            
-        
-     
+    
     </div>
         
 

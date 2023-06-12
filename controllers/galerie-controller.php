@@ -6,13 +6,37 @@
         $reponse = GalerieDB::lister();
 
         if ($reponse->isSuccessfull())
-        {
+        {   
+            $count = 0;
             $listeGalerie = $reponse->getData();
             foreach ($listeGalerie as $galerie) 
             {
+                if ($galerie) {
+                    
+                    if ($count % 3 === 0) {
+                        
+                        echo '<div class="itemRecent">';
+                    }
 
-                include 'views\ajoutRecent.php';
+                    include 'views\ajoutRecent.php';
 
+                
+                    $count++;
+
+                    
+                    if ($count % 3 === 0) {
+                        echo '</div>';
+                    }
+
+                } 
+                else 
+                {
+                    break; 
+                }
+            }
+
+            if ($count % 3 !== 0) {
+                echo '</div>';
             }
         } 
         else
