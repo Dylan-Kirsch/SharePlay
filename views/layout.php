@@ -76,11 +76,11 @@
      
     <div id="list">
         
-        <div class="itemRecent">
+        
 
-            <?php afficherGalerie(); ?>
+        <?php afficherGalerie(); ?>
             
-        </div>
+        
      
     </div>
         
