@@ -4,15 +4,15 @@
 
         public int $id;
 
-        public string $titre;
+        public string $title;
 
-        public string $photo_default;
+        public string $photo_defaut;
 
-        public function __construct(int $pId, string $pTitre, string $pPhoto_default) {
+        public function __construct(int $pId, string $pTitle, string $pPhoto_defaut) {
 
             $this->id = $pId;
-            $this->titre = htmlentities($pTitre);
-            $this->photo_default = $pPhoto_default;
+            $this->title = htmlentities($pTitle);
+            $this->photo_defaut = $pPhoto_defaut;
         }
 
     }

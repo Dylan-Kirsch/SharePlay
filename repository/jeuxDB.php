@@ -17,8 +17,8 @@
 
                     $jeux = new Jeux(
                         $value['id'],
-                        $value['titre'],
-                        $value['photo_default']
+                        $value['title'],
+                        $value['photo_defaut']
                     );
                 
                     $listeJeux->append($jeux);
@@ -54,8 +54,8 @@
                 {
                     $jeux = new Jeux(
                         $value['id'],
-                        $value['titre'],
-                        $value['photo_default']
+                        $value['title'],
+                        $value['photo_defaut']
                     );
                     
                     $resultat->append($jeux);

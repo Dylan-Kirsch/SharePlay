@@ -6,14 +6,14 @@
 
         public string $types;
 
-        public string $libelle;
+        public string $route;
 
 
-        public function __construct(int $pId, string $pTypes, string $pLibelle)
+        public function __construct(int $pId, string $pTypes, string $pRoute)
         {
             $this->id = $pId;
             $this->types = htmlentities($pTypes);
-            $this->libelle = htmlentities($pLibelle);
+            $this->route = htmlentities($pRoute);
         }
     }
 

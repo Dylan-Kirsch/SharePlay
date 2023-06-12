@@ -46,12 +46,15 @@
         case 'subscribe':
             UtilisateurController::inscription();
             break;
+
         case 'login':
             UtilisateurController::login();
             break;
-            case 'logout':
-                UtilisateurController::logout();
-                break;
+
+        case 'logout':
+            UtilisateurController::logout();
+            break;
+
         case 'news':
 
             if (isset($_GET['id'])) 
@@ -59,6 +62,10 @@
             else
                 AccueilController::afficherNews();
             break;
+
+        // case 'galerie':
+        //     GalerieController::ajouterGalerie();
+        //     break;
 
         case 'carousel-3D':
 

@@ -24,14 +24,14 @@ class UtilisateurController extends Controller
     {//affichage du formulaire => il faut générer le token CRSF
 
         $token = UtilisateurController::getCSRFToken();
-        include 'views\inscription.php';
+        include 'views\formulaire\inscription.php';
 
     }
     public static function afficherFormulaireConnexion()
     {//affichage du formulaire => il faut générer le token CRSF
 
         $token = UtilisateurController::getCSRFToken();
-        include 'views\connexion.php';
+        include 'views\formulaire\inscription.php';
  
     }
 
@@ -68,7 +68,7 @@ class UtilisateurController extends Controller
     public static function login()
     {
         if ((!isset($_POST['email'])||(!isset($_POST['password']))))
-            require_once 'views/connexion.php';
+            require_once 'views\formulaire\inscription.php';
         else
         {
             $userConnected = utilisateurDB::checkLogin($_POST['email'],$_POST['password']);
@@ -83,7 +83,7 @@ class UtilisateurController extends Controller
             }
             else
             {
-                require_once 'views/connexion.php';
+                require_once 'views\formulaire\inscription.php';
             }
 
         }

@@ -20,7 +20,7 @@
                     $type_Affichage = new TypeAffichage(
                         $value['id'],
                         $value['types'],
-                        $value['libelle']
+                        $value['route']
                     );
                 
                     $listeTypeAffichage->append($type_Affichage);

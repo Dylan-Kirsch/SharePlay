@@ -6,10 +6,10 @@ class AccueilController extends Controller
     {
         
         ob_start();
+        
         $reponse = NewsDB::lister();
         $listeJeux = JeuxDB::lister();
         $listeUnivers = UniversDB::lister();
-        
 
         if ($reponse->isSuccessfull())
         {

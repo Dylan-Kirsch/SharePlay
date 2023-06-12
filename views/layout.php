@@ -76,7 +76,7 @@
      
     <div id="list">
   
-        <?php afficherGalerie(); ?>
+        <?php GalerieController::afficherGalerie(); ?>
     
     </div>
         

@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2bd;;
+}
+
+.connect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 300px;
+    background: linear-gradient(201deg, #5454546b, #ffffff);
+    box-shadow: 1px 1px 10px #00000073;
+    border-radius: 10px;
+}
+
+.connect h1 {
+    text-align: center;
+    border-bottom: 1px solid #5959594a;
+    padding-bottom: 15px;
+}
+
+.connect form {
+    padding: 0px 0px 20px 20px;
+}
+
+.name {
+    padding-bottom: 16px;
+}
+
+input[type="text"] {
+    height: 25px;
+    width: 85%;
+}
+
+.pass {
+    padding-bottom: 16px;
+}
+
+input[type="password"] {
+    height: 25px;
+    width: 85%;
+}
+
+button {
+    width: 27%;
+    height: 30px;
+    font-size: 1.5em;
+    margin: 5px 0px 0px 86px;
+    border-radius: 19px;
+    border: 1px solid #bdabff;
+}
+
+button:hover {
+    background: #ff0000d4;
+    color: #fff;
+}

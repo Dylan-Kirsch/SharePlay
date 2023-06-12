@@ -16,7 +16,7 @@
 
                 foreach ($resultat as $key => $value) {
                     
-                    $utilisateur = new Utilisateur 
+                    $utilisateur = new Utilisateur
                     (
                         $value['id'],
                         $value['nom'],
@@ -126,7 +126,7 @@
                 $db->execute(['id'=>$id]);
 
                 $tuple =$db->fetch();
-                $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],$tuple['admin']);
+                $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe']);
                 return $utilisateur;
             }
             catch (PDOException $exception) 

@@ -1,4 +1,4 @@
-<?php ajouterGalerie(); ?>
+<?php GalerieController::ajouterGalerie(); ?>
 
 <header class="container-fluid p-0">
     
@@ -14,7 +14,7 @@
                 <button id="navBtn" class="btn">Créer une galerie</button>
             </div> 
             
-            <?php include 'formGalerie.php'?>
+            <?php include 'views\formulaire\formGalerie.php'?>
 
         </div>
 

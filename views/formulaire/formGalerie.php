@@ -16,7 +16,7 @@
                     <?php
 
                     foreach ($listeJeux->getdata() as $jeu): ?>
-                        <option value="<?=$jeu->id?>"<?=(isset($_POST['idJeu'])&&$_POST['idJeu']==$jeu->id)?" SELECTED ":""?>><?=$jeu->titre?></option>
+                        <option value="<?=$jeu->id?>"<?=(isset($_POST['idJeu'])&&$_POST['idJeu']==$jeu->id)?" SELECTED ":""?>><?=$jeu->title?></option>
 
                     <?php
                     endforeach; ?>
@@ -73,7 +73,7 @@
             <input type="submit" name="creer" value="valider">
         </div>
 
-        <input type="hidden" name="csrftoken" value="<?=$token?>">
+        <!-- <input type="hidden" name="csrftoken" value=""> -->
 
     </div>
 

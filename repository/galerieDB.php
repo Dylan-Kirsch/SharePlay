@@ -23,14 +23,14 @@
 
                     $jeux = new Jeux(
                         $value['id'],
-                        $value['titre'],
+                        $value['title'],
                         $value['photo_default']
                     );
 
                     $univers = new Univers(
                         $value['id'],
                         $value['titre'],
-                        $value['photo_default']
+                        $value['photo_defaut']
                     );
                     
                     // $tag = new Tag(
@@ -46,7 +46,7 @@
                     // $typeAffichage = new TypeAffichage(
                     //     $value['id'],
                     //     $value['types']
-                    //     $value[''libelle]
+                    //     $value['route']
                     // );
 
                     $utilisateur = new Utilisateur(
@@ -114,8 +114,8 @@
 
                     $jeux = new Jeux(
                         $value['id'],
-                        $value['titre'],
-                        $value['photo_default']
+                        $value['title'],
+                        $value['photo_defaut']
                     );
 
                     $univers = new Univers(
