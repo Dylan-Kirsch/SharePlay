@@ -81,6 +81,7 @@
             {
                 $jeu = JeuxDB::lister()->getData();
                 $univers = UniversDB::lister()->getData();
+                $typeAffichage = TypeAffichageDB::lister()->getdata();
             }
             else
             {   
@@ -100,7 +101,7 @@
                     {
                         $jeu = JeuxDB::lister()->getData();
                         $univers = UniversDB::lister()->getData();
-
+                        $typeAffichage = TypeAffichageDB::lister()->getdata();
                     }
 
                 }     

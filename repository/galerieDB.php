@@ -10,11 +10,15 @@
             {
             
                 $stmt = Database::getInstance()->query("SELECT *, 
-                                                        galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers', utilisateur.id as 'iduser'
-                                                        FROM GALERIE ,JEU, UNIVERS, UTILISATEUR
+                                                        galerie.id as 'idGalerie', jeu.id as 'idJeu',
+                                                        univers.id as 'idUnivers', utilisateur.id as 'iduser',
+                                                        type_affichage.id as 'idtype'
+                                                        FROM GALERIE ,JEU, UNIVERS,TYPE_AFFICHAGE , UTILISATEUR
                                                         WHERE JEU.ID = GALERIE.num_jeu
                                                         AND UNIVERS.ID = GALERIE.num_univers
+                                                        AND TYPE_AFFICHAGE.ID = GALERIE.num_type_affichage
                                                         AND UTILISATEUR.ID = GALERIE.num_utilisateur;");
+                                                        
 
                 $resultat = $stmt->fetchall();
                 $listeGalerie = new ArrayObject();
@@ -43,11 +47,11 @@
                     //     $value['photo']
                     // );
 
-                    // $typeAffichage = new TypeAffichage(
-                    //     $value['id'],
-                    //     $value['types']
-                    //     $value['route']
-                    // );
+                    $typeAffichage = new TypeAffichage(
+                        $value['id'],
+                        $value['types'],
+                        $value['route']
+                    );
 
                     $utilisateur = new Utilisateur(
                         $value['id'],
@@ -65,7 +69,7 @@
                         $univers,
                         // $tag,
                         // $photo,
-                        // $typeAffichage
+                        $typeAffichage,
                         $utilisateur
                     );
 
@@ -100,7 +104,8 @@
             try 
             {
             
-                $stmt = Database::getInstance()->query("SELECT *, galerie.id as 'idGalerie', jeu.id as 'idJeu',univers.id as 'idUnivers' 
+                $stmt = Database::getInstance()->query("SELECT *, galerie.id as 'idGalerie', jeu.id as 'idJeu',
+                                                        univers.id as 'idUnivers' 
                                                         FROM GALERIE,JEU,UNIVERS 
                                                         WHERE JEU.ID = GALERIE.num_JEU
                                                         AND UNIVERS.ID = GALERIE.num_UNIVERS
@@ -137,6 +142,7 @@
                     // $typeAffichage = new TypeAffichage(
                     //     $value['id'],
                     //     $value['types']
+                        
                     // );
 
                     $galerie = new Galerie(
@@ -178,18 +184,21 @@
                 return false;
                 // if (!(isset($pData['idTag'])&& is_numeric($pData['idTag'])))
                 // return false;
+                if (!(isset($pData['idType'])&& is_numeric($pData['idType'])))
+                return false;
                 if (!(isset($pData['idUser'])&& is_numeric($pData['idUser'])))
                 return false;
 
             try
             {
                 
-                $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers, num_utilisateur)
-                VALUES(:idJeu, :idUnivers, :idUser)");
+                $stmt = Database::getInstance()->prepare("INSERT INTO GALERIE (num_jeu, num_univers, num_type_affichage, num_utilisateur)
+                VALUES(:idJeu, :idUnivers, :idType, :idUser)");
                 
                 $stmt->bindValue(':idJeu',$pData['idJeu']);
                 $stmt->bindValue(':idUnivers',$pData['idUnivers']);
                 // $stmt->bindValue(':idTag',$pData['idTag']);
+                $stmt->bindValue(':idType',$pData['idType']);
                 $stmt->bindValue(':idUser',$pData['idUser']);
 
                 return $stmt->execute();

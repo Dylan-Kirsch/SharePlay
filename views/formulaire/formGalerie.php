@@ -55,16 +55,23 @@
             <input type="file" name="photo">
             <h1>Ajouter une image</h1>
             <span>jpg, png 5Mo max - 5 images max</span>
-        </div> 
+        </div>  -->
         
         <div class="choixGalerie">
             <label for="typeGaleries">Choisir le type de galerie</label>
 
             <select id="typeGaleries" name="idType">
 
+                <?php
+
+                foreach ($listeTypeAffichage->getdata() as $type_Affichage): ?>
+                    <option value="<?=$type_Affichage->id?>"<?=(isset($_POST['idType'])&&$_POST['idType']==$type_Affichage->id)?" SELECTED ":""?>><?=$type_Affichage->types?></option>
+
+                <?php
+                endforeach; ?>
 
             </select>
-        </div>   -->
+        </div>  
 
 
         <input type="hidden" name="idUser" value="<?=isset($_POST['idUser'])?$_POST['idUser']:$_SESSION['userID']?>" >
