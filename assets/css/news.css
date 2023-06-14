@@ -1,10 +1,5 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #e2e2e2bd;;
-}
 
-.connect {
+.news {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -15,13 +10,13 @@ body {
     border-radius: 10px;
 }
 
-.connect h1 {
+.news h1 {
     text-align: center;
     border-bottom: 1px solid #5959594a;
     padding-bottom: 15px;
 }
 
-.connect form {
+.news form {
     padding: 0px 0px 20px 20px;
 }
 

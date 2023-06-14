@@ -4,11 +4,21 @@
         width: 13%;
         font-size: 3.6em;
     }
+
+
+/* NAV LOGO */
+
+    #navGauche {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
     
 /* CONNEXION  */
     
     .dropMenu {
         width: 262%;
+        right: 113%;
     }
 
     .dropMenu h1 {
@@ -17,6 +27,10 @@
 
     .dropMenu #inscrire {
         margin-bottom: 32px;
+    }
+
+    .dropMenu #inscrire p {
+        width: 72%;
     }
 
     .dropMenu #identifiant {
@@ -31,10 +45,15 @@
         font-size: 1.2em;
     }
 
+
 /* INSCRIPTION */
 
     #seConnecter {
         font-size: 0.7em;
+    }
+
+    #seConnecter p {
+        width: 50%;
     }
 
     #inscription #nom {
@@ -69,6 +88,7 @@
         text-align: center;
     }
 
+
 /* CREER GALERIE */
 
     .titre h1 {
@@ -92,6 +112,103 @@
         width: 68%;
         font-size: 0.9em;
     }
+
+    #choixTags {
+        flex-direction: column;
+    }
+
+    #choixTags h1 {
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+
+    #ajoutImg h2 {
+        font-size: 0.8em;
+    }
+
+    #ajoutImg input {
+        margin: 32px 0;
+        font-size: 0.8em;
+        padding-left: 25px;
+    }
+
+    #ajoutImg h1 {
+        font-size: 1.5em;
+        margin-bottom: 7px;
+    }
+
+    #ajoutImg span {
+        font-size: 0.6em;
+    }
+
+    .choixGalerie label {
+        font-size: 1.2em;
+    }
+
+
+/* PROFIL */
+
+    #leProfil {
+        width: 120%;
+        margin-top: 7px;
+    }
+
+    #leProfil span {
+        font-size: 1em;
+    }
+
+    #leProfil #btnDrop {
+        width: 39%;
+        margin: 0;
+    }
+
+    #profil .paraProfil, .mesGalerie, .touteCommu, .news {
+        font-size: 1.3em;
+    }
+
+
+
+/* CAROUSEL */
+
+    #carousel h1 {
+        font-size: 2em;
+    }
+
+    .description {
+        bottom: 154px;
+    }
+
+    .paraCarousel {
+        font-size: 1.3em;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

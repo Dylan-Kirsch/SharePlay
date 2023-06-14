@@ -30,6 +30,12 @@
     border-bottom: 1px solid #000;
 }
 
+#seConnecter p {
+    cursor: pointer;
+    width: 43%;
+    float: right;
+}
+
 .dropMenu #nom {
     margin-right: 17px;
     margin-bottom: 46px;

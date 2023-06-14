@@ -55,9 +55,9 @@
             <input type="file" name="photo">
             <h1>Ajouter une image</h1>
             <span>jpg, png 5Mo max - 5 images max</span>
-        </div>  -->
+        </div> 
         
-        <!-- <div class="choixGalerie">
+        <div class="choixGalerie">
             <label for="typeGaleries">Choisir le type de galerie</label>
 
             <select id="typeGaleries" name="idType">

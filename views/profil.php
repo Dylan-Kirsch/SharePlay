@@ -32,6 +32,13 @@
             </a>
         </li>
 
+        <li class="news" >
+            <a href="views\formulaire\news.php">
+                Ajouter une news
+            </a>
+            
+        </li>
+
         <li class="deconnection">
             <a href="index.php?page=logout">Deconnexion</a>
         </li>

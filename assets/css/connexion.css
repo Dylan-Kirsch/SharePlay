@@ -29,6 +29,12 @@
     border-bottom: 1px solid #000;
 }
 
+.dropMenu #inscrire p {
+    cursor: pointer;
+    width: 58%;
+    float: right;
+}
+
 
 .dropMenu #identifiant{
     width: 75%;
