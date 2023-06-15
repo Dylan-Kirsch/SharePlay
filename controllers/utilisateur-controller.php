@@ -4,15 +4,11 @@ class UtilisateurController extends Controller
     public static function afficherUtilisateur()
     {
        
-        $reponse = UtilisateurDB::lister();
-        if ($reponse->isSuccessfull())
+        $utilisateur = UtilisateurDB::load($_SESSION['userID']);
+        if ($utilisateur)
         {
-            $listeUtilisateur = $reponse->getData();
-            // var_dump($listeUtilisateur);
-            foreach ($listeUtilisateur as $utilisateur) 
-            {
-                
-            }
+                include 'views\profil.php';
+
         } 
         else
         include('views\afficherException.php');
@@ -76,10 +72,12 @@ class UtilisateurController extends Controller
             {
                 $_SESSION['isConnected']=true;
                 $_SESSION['userID']= $userConnected->getId();
+                $_SESSION['nom']= $userConnected->getNom();
+                $_SESSION['prenom']= $userConnected->getPrenom();
                 $_SESSION['pseudo']= $userConnected->getPseudo();
+                $_SESSION['email']= $userConnected->getEmail();
                 $_SESSION['message']='Bienvenue '. $userConnected->getPseudo();
                 header('Location: index.php');
-               
             }
             else
             {

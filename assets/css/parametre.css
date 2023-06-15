@@ -1,0 +1,8 @@
+#paraProfil {
+    display: flex;
+}
+
+#paraProfil img {
+    width: 11%;
+    border-radius: 4px;
+}

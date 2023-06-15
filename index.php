@@ -40,7 +40,7 @@
                 $accueil = $_GET['page'];
             else
                 $accueil = 'news';
-    
+     
     switch($accueil)
     {
         case 'subscribe':
@@ -63,9 +63,17 @@
                 AccueilController::afficherNews();
             break;
 
-        // case 'galerie':
-        //     GalerieController::ajouterGalerie();
-        //     break;
+        case 'parametre':
+
+            include 'views\parametreProfil.php';
+
+            break;
+
+        case 'carousel-classique':
+
+            include 'views\carousel-type\carousel-classique.php';
+
+            break;
 
         case 'carousel-3D':
 

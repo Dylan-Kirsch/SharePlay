@@ -7,12 +7,12 @@
 <div id="profil" class="dropMenu">
     <div class="profil">
         <img src="assets/images/photo-profil.jpg" alt="photo de profil">
-        <h3>Dylan Kirsch</h3>
-        <span>Kurama-X9</span>
+        <h3><?=$utilisateur->getPrenom()?> <?=$utilisateur->getNom()?></h3>
+        <span><?=$_SESSION['pseudo']?></span>
     </div>
     <ul>
         <li class="paraProfil" >
-            <a href="#">
+            <a href="index.php?page=parametre">
                 <i class="fa-solid fa-gear"></i>
                 Paramètre du profil
             </a>

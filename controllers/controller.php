@@ -23,26 +23,26 @@ class Controller
         return (isset($_POST['csrftoken'])&&($_SESSION['csrftoken']==$_POST['csrftoken']));
     }
 
-    public static function isAdmin()
-    {
-        if (!isset($_SESSION['userID']))
-            return false;
-        // var_dump($_SESSION['userID']);
-        $user = UtilisateurDB::load($_SESSION['userID']);
-        return $user->isAdmin();
-    }
+    // public static function isAdmin()
+    // {
+    //     if (!isset($_SESSION['userID']))
+    //         return false;
+    //     // var_dump($_SESSION['userID']);
+    //     $user = UtilisateurDB::load($_SESSION['userID']);
+    //     return $user->isAdmin();
+    // }
     
-    public static function isNotAdmin()
-    {
-        return !Controller::isAdmin();
-    }
+    // public static function isNotAdmin()
+    // {
+    //     return !Controller::isAdmin();
+    // }
 
-    public static function requireAdmin()
-    {
-        if (Controller::isNotAdmin())
-           header('Location: index.php?command=login');
+    // public static function requireAdmin()
+    // {
+    //     if (Controller::isNotAdmin())
+    //        header('Location: index.php?command=login');
         
-    }
+    // }
 }
 
 ?>

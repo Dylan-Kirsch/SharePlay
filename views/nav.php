@@ -9,15 +9,26 @@
             <span id="nomSite" class="text-capitalize">sharePlay</span>
         </a>
 
+        
+
         <div id="creerGalerie">
             <div class="btnCreer">
                 <button id="navBtn" class="btn">Créer une galerie</button>
-            </div> 
-            
+            </div>
+
+            <?php 
+            if (AccueilController::isConnected())
+            {
+            ?>  
+
             <?php include 'views\formulaire\formGalerie.php'?>
-
+            
+            <?php
+            }
+            ?>
         </div>
-
+        
+        
 
         <div class="dropAction">
             
@@ -27,7 +38,7 @@
                 else
             {?>
                 
-                <?php include 'profil.php';?>
+                <?php UtilisateurController::afficherUtilisateur(); ?>
 
             <?php
                 }
