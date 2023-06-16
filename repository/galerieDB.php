@@ -59,7 +59,9 @@
                         $value['prenom'],
                         $value['pseudo'],
                         $value['email'],
-                        $value['mot_de_passe']
+                        $value['mot_de_passe'],
+                        $value['adresse'],
+                        $value['langue']
                     );
 
 

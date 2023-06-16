@@ -23,6 +23,7 @@ class UtilisateurController extends Controller
         include 'views\formulaire\inscription.php';
 
     }
+
     public static function afficherFormulaireConnexion()
     {//affichage du formulaire => il faut générer le token CRSF
 
@@ -37,7 +38,7 @@ class UtilisateurController extends Controller
         // Les tests de garde sont réalisés dans UtilisateurDB::creerUtilisateur()
         if (UtilisateurController::checkCSRFToken())
         {
-            $resultat = UtilisateurDB::creerUtilisateur($_POST);
+            $resultat = UtilisateurDB::creerUtilisateur($_POST) && UtilisateurDB::modifInfoProfil($_POST);
             if ($resultat)
             {
                 $_SESSION['message']='views\success\utilisateurAjouter.php';
@@ -86,16 +87,22 @@ class UtilisateurController extends Controller
 
         }
     }
+
     public static function logout()
     {
         $_SESSION['message']='Au revoir '. $_SESSION['pseudo'];
         unset( $_SESSION['isConnected']);
         unset( $_SESSION['userID']);
         // unset( $_SESSION['isAdmin']);
+        unset( $_SESSION['nom']);
+        unset( $_SESSION['prenom']);
         unset( $_SESSION['pseudo']);
+        unset( $_SESSION['email']);
         header('Location: index.php');
         
     }
+
+    
 
 }
 

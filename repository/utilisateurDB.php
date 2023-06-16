@@ -23,7 +23,9 @@
                         $value['prenom'],
                         $value['pseudo'],
                         $value['email'],
-                        $value['mot_de_passe']
+                        $value['mot_de_passe'],
+                        $value['adresse'],
+                        $value['langue']
 
                     );
 
@@ -61,8 +63,9 @@
                 return false;
                 if (!(isset($pData['mot_de_passe'])&& strlen($pData['mot_de_passe'])))
                 return false;
-            if (!filter_var($pData['email'], FILTER_VALIDATE_EMAIL))
+                if (!filter_var($pData['email'], FILTER_VALIDATE_EMAIL))
                 return false;
+
             try
             {
                 
@@ -87,6 +90,39 @@
         }
 
 
+// ************* MODIFIER UTILISATEUR ************
+
+        public static function modifInfoProfil($pData):bool
+        {
+            if (!(isset($pData['nom'])&& strlen($pData['adresse'])))
+            return false;
+                if (!(isset($pData['adresse'])&& strlen($pData['adresse'])))
+                return false;
+                if (!(isset($pData['langue'])&& strlen($pData['langue'])))
+                return false;
+            
+            try
+            {
+                $stmt = Database::getInstance()->prepare("UPDATE UTILISATEUR  SET (nom, adresse, langue)
+                VALUES(:nom, :adresse, :langue) WHERE id.utilisateur ");
+
+                $stmt->bindValue(':nom',$pData['nom']);
+                $stmt->bindValue(':adresse',$pData['adresse']);
+                $stmt->bindValue(':langue',$pData['langue']);
+
+                return $stmt->execute();
+            }
+
+            catch (PDOException $e)
+            {
+                echo $e->getMessage();
+                return false;
+            }
+
+        }
+
+
+
 // ************  LOGIN   **************
 
 
@@ -103,7 +139,9 @@
                 $tuple = $db->fetch();
                 if ($tuple && password_verify($mot_de_passe, $tuple['mot_de_passe']))
                     {
-                        $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe']);
+                        $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],
+                                                       $tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],
+                                                       $tuple['adresse'], $tuple['langue']);
                         return $utilisateur;
                     }
                     else
@@ -126,7 +164,9 @@
                 $db->execute(['id'=>$id]);
 
                 $tuple =$db->fetch();
-                $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],$tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe']);
+                $utilisateur = new Utilisateur($tuple['id'],$tuple['nom'],$tuple['prenom'],
+                                               $tuple['pseudo'],$tuple['email'],$tuple['mot_de_passe'],
+                                               $tuple['adresse'], $tuple['langue']);
                 return $utilisateur;
             }
             catch (PDOException $exception) 
