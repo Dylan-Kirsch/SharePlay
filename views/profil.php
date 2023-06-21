@@ -20,20 +20,21 @@
 
         <li class="mesGalerie" >
             <a href="#">
-                <i class="fa-solid fa-rectangle-history-circle-user"></i>
+                <i class="fa-solid fa-panorama fa-sm"></i>
                 Mes galeries
             </a>
         </li>
 
         <li class="touteCommu" >
             <a href="#">
-                <i class="fa-solid fa-ball-pile"></i>
+                <i class="fa-solid fa-users-rays fa-sm"></i>
                 Toutes les communautés
             </a>
         </li>
 
         <li class="news" >
-            <a href="views\formulaire\news.php">
+            <a href="index.php?page=ajouter-news">
+            <i class="fa-sharp fa-solid fa-rss fa-sm"></i>
                 Ajouter une news
             </a>
             

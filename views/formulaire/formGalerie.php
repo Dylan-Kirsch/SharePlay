@@ -49,14 +49,19 @@
         </div>
         
 
-
-        <!-- <div id="ajoutImg">
-            <h2>5 images restantes</h2>
-            <input type="file" name="photo">
-            <h1>Ajouter une image</h1>
-            <span>jpg, png 5Mo max - 5 images max</span>
-        </div>  -->
         
+
+
+        <div id="ajoutImg">
+            <h2>6 images restantes</h2>
+            <input type="file" name="photo" value="<?=isset($_POST['photo'])?$_POST['photo']:"";?>">
+            <h1>Ajouter une image</h1>
+            <span>jpg, png 5Mo max - 6 images max</span>
+        </div> 
+        
+
+
+
         <div class="choixGalerie">
             <label for="typeGaleries">Choisir le type de galerie</label>
 

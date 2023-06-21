@@ -121,8 +121,8 @@ body {
     width: 100%;
 }
 
-.jeu {
-    margin-right: 5%;
+#jeux {
+    margin-right: 2%;
 }
 
 #choixTags {
@@ -154,6 +154,10 @@ body {
     border: 1px solid #000;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+#ajoutImg input {
+    margin: 40px;
 }
 
 #ajoutImg h2 {

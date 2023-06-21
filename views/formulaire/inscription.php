@@ -34,7 +34,7 @@
 
         </form>
 
-<!-- INSCRIPTION -->
+<!-- INSCRIPTION --> 
         
         <form method="POST" action="index.php?page=subscribe" >
 

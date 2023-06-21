@@ -38,7 +38,7 @@ class UtilisateurController extends Controller
         // Les tests de garde sont réalisés dans UtilisateurDB::creerUtilisateur()
         if (UtilisateurController::checkCSRFToken())
         {
-            $resultat = UtilisateurDB::creerUtilisateur($_POST) && UtilisateurDB::modifInfoProfil($_POST);
+            $resultat = UtilisateurDB::creerUtilisateur($_POST);
             if ($resultat)
             {
                 $_SESSION['message']='views\success\utilisateurAjouter.php';
@@ -46,10 +46,10 @@ class UtilisateurController extends Controller
             }
                 
             else
-              {
+            {
                 $_SESSION['error']='views\afficherException.php';
                 header('Location: index.php');
-              } 
+            } 
         }
         else
         {
@@ -58,6 +58,31 @@ class UtilisateurController extends Controller
                 header('Location: index.php');
         }
                      
+    }
+
+    public static function modifier()
+    {
+        if (UtilisateurController::checkCSRFToken())
+        {
+            $resultat = UtilisateurDB::modifInfoProfil($_POST);
+            if ($resultat)
+            {
+                $_SESSION['message']='views\success\utilisateurAjouter.php';
+                header('Location: parametreProfil.php');
+            }
+                
+            else
+              {
+                $_SESSION['error']='views\afficherException.php';
+                header('Location: parametreProfil.php');
+              } 
+        }
+        else
+        {
+
+                $_SESSION['error']='SECURITY ISSUE';
+                header('Location: parametreProfil.php');
+        }
     }
 
 
@@ -99,7 +124,6 @@ class UtilisateurController extends Controller
         unset( $_SESSION['pseudo']);
         unset( $_SESSION['email']);
         header('Location: index.php');
-        
     }
 
     

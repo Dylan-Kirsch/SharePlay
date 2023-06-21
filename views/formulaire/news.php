@@ -6,26 +6,52 @@
 
     <link rel="stylesheet" href=".\assets\css\news.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"  integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sansita:wght@700&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" >
+
     <title>Document</title>
 </head>
 <body>
 
-    <div class="news" >
+    <div id="newsForm" class="container">
 
-        <h1>Créer une nouvelle news</h1>
+        <div id="background" class="card">
 
-        <form method="POST">
-            <div class="name">
-                <input type="text" name="username" placeholder="Nom ">
+            <img src=".\assets\images\news\news-wallpaper.jpg" alt="">
+
+            <div class="card-img-overlay">
+                <h1>Ajouter une nouvelle news</h1>
             </div>
+            
+        </div>
 
-            <div class="pass">
-                <input type="password" name="password" placeholder="mdp ">
-            </div>
+        <div class="news card" >
 
-            <button type="submit" name="submit">Go</button>
-        </form>
+            <form method="POST">
+                <!-- <div class="titre">
+                    <input type="text" name="titre" placeholder="titre ">
+                </div>
+
+                <div class="info">
+                    <input type="text" name="info" placeholder="information ">
+                </div> -->
+
+                <div class="photo">
+                    <input type="file" name="photo" placeholder="ajouter une photo">
+                </div>
+
+                <div class="valider">
+                    <input type="submit" name="ajouter" value="valider">
+                </div>
+            </form>
+        </div>
+
     </div>
+
+    
     
 </body>
 </html>

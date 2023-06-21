@@ -62,6 +62,12 @@
             else
                 AccueilController::afficherNews();
             break;
+        
+        case 'ajouter-news':
+
+            include 'views\formulaire\news.php';
+
+            break;
 
         case 'parametre':
 

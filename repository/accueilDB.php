@@ -84,6 +84,36 @@
                 
             }
         }
+
+        // static public function ajouterNews($pData):bool
+        // {
+        
+        //     if (!(isset($pData['titre'])&& file($pData['titre'])))
+        //     return false;
+        //     if (!(isset($pData['information'])&& file($pData['information'])))
+        //     return false;
+        //     if (!(isset($pData['photo'])&& file($pData['photo'])))
+        //     return false;
+
+        //     try
+        //     {
+        //         $stmt = Database::getInstance()->prepare("INSERT INTO news (titre, information, photo)
+        //         VALUES(:titre, :information, :photo)");
+                
+        //         $stmt->bindValue(':titre',$pData['titre']);
+        //         $stmt->bindValue(':information',$pData['information']);
+        //         $stmt->bindValue(':photo',$pData['photo']);
+
+        //         return $stmt->execute();
+        //     }
+
+        //     catch (PDOException $e)
+        //     {
+        //         echo $e->getMessage();
+        //         return false;
+        //     }
+            
+        // }
         
 
 

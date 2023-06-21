@@ -2,7 +2,7 @@
 
     class Utilisateur
     {
-// mettre en place l'encapsulation: $id ->$_id et en private
+
         private int $id;
 
         private string $nom;

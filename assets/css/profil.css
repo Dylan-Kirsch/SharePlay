@@ -51,6 +51,10 @@
     transition: 0.4s;
 }
 
+#profil i {
+    padding-right: 13px;
+}
+
 .profil {
     display: flex;
     margin-top: 4%;
@@ -67,6 +71,8 @@
     margin-top: 4%;
     margin-left: 2%;
 }
+
+
 
 .profil span {
     font-family: 'EB Garamond', serif;

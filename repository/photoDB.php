@@ -37,11 +37,11 @@
         }
 
 
-        static public function creer($pData):bool
+        static public function uploader($pData):bool
         {
         
             
-            if (!(isset($pData['photo'])&& file_exists($pData['photo'])))
+            if (!(isset($pData['photo'])&& file($pData['photo'])))
                 return false;
 
             try

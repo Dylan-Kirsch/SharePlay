@@ -104,7 +104,7 @@
             try
             {
                 $stmt = Database::getInstance()->prepare("UPDATE UTILISATEUR  SET (nom, adresse, langue)
-                VALUES(:nom, :adresse, :langue) WHERE id.utilisateur ");
+                VALUES(:nom, :adresse, :langue) WHERE id.utilisateur");
 
                 $stmt->bindValue(':nom',$pData['nom']);
                 $stmt->bindValue(':adresse',$pData['adresse']);
@@ -126,7 +126,7 @@
 // ************  LOGIN   **************
 
 
-        public static function checkLogin($email,$mot_de_passe)
+        public static function checkLogin($email, $mot_de_passe)
         {
             try
             {
