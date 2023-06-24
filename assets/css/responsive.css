@@ -182,29 +182,75 @@
         font-size: 1.3em;
     }
 
+}
 
+@media screen and (max-width: 768px) {
 
+    #navbar {
+        border-radius: 0;
+        padding: 5px 1px
+    }
 
+    #navGauche {
+        width: 43%;
+    }
 
+    #navGauche #logo1 {
+        width: 28%;
+    }
 
+    #nomSite {
+        font-size: 1.5em;
+    }
 
+    #creerGalerie {
+        width: 16%;
+    }
 
+    #navBtn {
+        font-size: 0.8em;
+    }
 
+    .dropMenu {
+        width: 332%;
+        right: 200%;
+    }
 
+    .dropMenu #bouton input {
+        font-size: 1em;
+    }
 
+    .dropAction {
+        height: 11vh;
+    }
 
+    .cImg {
+        height: 76vh;
+        border-radius: 0% 0% 100% 0% / 0% 0% 4% 0%;
+    }
+    
+    #carousel {
+        height: 77vh;
+    }
 
+    #carousel h1 {
+        font-size: 1.7em;
+    }
 
+    .paraCarousel {
+        font-size: 1em;
+        padding-top: 10px;
+    }
 
+    .description {
+        bottom: 125px;
+        padding: 5px 12px;
+        border-radius: 0% 0% 100% 0% / 0% 0% 17% 0%;
+    }
 
-
-
-
-
-
-
-
-
+    footer h4 {
+        font-size: 1.2em;
+    }
 
 
 

@@ -30,7 +30,7 @@
 
         <div class="news card" >
 
-            <form method="POST">
+            <form action="index.php?page=upload-news" method="POST" enctype="multipart/form-data">
                 <!-- <div class="titre">
                     <input type="text" name="titre" placeholder="titre ">
                 </div>
@@ -39,8 +39,8 @@
                     <input type="text" name="info" placeholder="information ">
                 </div> -->
 
-                <div class="photo">
-                    <input type="file" name="photo" placeholder="ajouter une photo">
+                <div class="photos">
+                    <input type="file" name="photo" id="photo" placeholder="ajouter une photo">
                 </div>
 
                 <div class="valider">

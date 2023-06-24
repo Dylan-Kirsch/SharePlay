@@ -85,35 +85,35 @@
             }
         }
 
-        // static public function ajouterNews($pData):bool
-        // {
+        static public function ajouterNews($pData):bool
+        {
         
-        //     if (!(isset($pData['titre'])&& file($pData['titre'])))
-        //     return false;
-        //     if (!(isset($pData['information'])&& file($pData['information'])))
-        //     return false;
-        //     if (!(isset($pData['photo'])&& file($pData['photo'])))
-        //     return false;
+            if (!(isset($pData['titre'])&& isset($pData['titre'])))
+            return false;
+            if (!(isset($pData['information'])&& isset($pData['information'])))
+            return false;
+            if (!(isset($pData['photo'])&& isset($pData['photo'])))
+            return false;
 
-        //     try
-        //     {
-        //         $stmt = Database::getInstance()->prepare("INSERT INTO news (titre, information, photo)
-        //         VALUES(:titre, :information, :photo)");
+            try
+            {
+                $stmt = Database::getInstance()->prepare("INSERT INTO news (titre, information, photo)
+                VALUES(:titre, :information, :photo)");
                 
-        //         $stmt->bindValue(':titre',$pData['titre']);
-        //         $stmt->bindValue(':information',$pData['information']);
-        //         $stmt->bindValue(':photo',$pData['photo']);
+                $stmt->bindValue(':titre',$pData['titre']);
+                $stmt->bindValue(':information',$pData['information']);
+                $stmt->bindValue(':photo',$pData['photo']);
 
-        //         return $stmt->execute();
-        //     }
+                return $stmt->execute();
+            }
 
-        //     catch (PDOException $e)
-        //     {
-        //         echo $e->getMessage();
-        //         return false;
-        //     }
+            catch (PDOException $e)
+            {
+                echo $e->getMessage();
+                return false;
+            }
             
-        // }
+        }
         
 
 

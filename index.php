@@ -69,6 +69,12 @@
 
             break;
 
+        case 'upload-news':
+
+            AccueilController::ajouterNews();
+
+            break;
+
         case 'parametre':
 
             include 'views\parametreProfil.php';
