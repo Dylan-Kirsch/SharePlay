@@ -36,11 +36,8 @@ CREATE TABLE IF NOT EXISTS type_affichage
 
 CREATE TABLE IF NOT EXISTS photo
 (
-
     id INT primary key AUTO_INCREMENT,
     photo VARCHAR(255) NOT NULL,
-    
-
 );
 
 
@@ -143,3 +140,6 @@ CREATE TABLE IF NOT EXISTS galerie
     FOREIGN KEY (num_tag) REFERENCES tag (id),
     FOREIGN KEY (num_utilisateur) REFERENCES utilisateur (id)
 );
+
+CREATE USER 'dylan'@'localhost' IDENTIFIED BY '*****';
+GRANT UPDATE, SELECT, INSERT on share_play.* TO 'dylan'@'localhost' WITH GRANT OPTION;

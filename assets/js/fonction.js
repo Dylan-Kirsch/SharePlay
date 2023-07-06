@@ -1,4 +1,3 @@
-
 function toggleDrop() 
 {
     let profil = document.querySelector('.dropMenu');
@@ -21,8 +20,6 @@ function toggleDrop()
     }
     
 }
-
-
 
 function toggleCreerGalerie() 
 {
@@ -66,6 +63,5 @@ function hiddenForm()
         inscription.style.display = "flex";
         console.log('caché');
     }
-
 
 }

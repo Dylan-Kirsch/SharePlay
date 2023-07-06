@@ -45,7 +45,7 @@ class UtilisateurController extends Controller
                 header('Location: index.php');
             }
                 
-            else
+            else 
             {
                 $_SESSION['error']='views\afficherException.php';
                 header('Location: index.php');

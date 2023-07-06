@@ -41,7 +41,7 @@ body {
 
 #navBtn { 
     border-radius: 30px;
-    background-color: #0064e7;
+    background-color: rgb(0, 100, 231);
     color: #fff;
     font-family: 'Sansita', sans-serif;
 }
@@ -340,7 +340,7 @@ main h1 {
 /* ************* SECTION UNIVERS PLUS REGARDER *************** */
 
 #universPlusRegarder {
-    background-color: #00439C;
+    background-color: #00439c;
     padding-bottom: 4%;
     border-radius: 0% 0% 100% 0% / 0% 0% 1.5% 0%;
 }

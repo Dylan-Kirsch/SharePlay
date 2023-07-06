@@ -52,12 +52,12 @@
         
 
 
-        <div id="ajoutImg">
+        <!-- <div id="ajoutImg">
             <h2>6 images restantes</h2>
-            <input type="file" name="photo" value="<?=isset($_POST['photo'])?$_POST['photo']:"";?>">
+            <input type="file" name="photo" value="">
             <h1>Ajouter une image</h1>
             <span>jpg, png 5Mo max - 6 images max</span>
-        </div> 
+        </div>  -->
         
 
 

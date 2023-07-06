@@ -26,7 +26,7 @@
 
     <script src="assets\js\fonction.js"></script>
     <script src="assets\js\execution.js" defer></script>
-    <script src="assets\js\carouselAjout.js "defer></script>
+    <script src="assets\js\carouselAjout.js" defer></script>
 
     <title>SharePlay</title>
 
@@ -106,8 +106,6 @@
         </div>
 
     </section>
-
-    <?php  ?>
 
     <?php include 'views/footer.php' ?>
     

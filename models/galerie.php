@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
-    class Galerie
+    class Galerie extends PHPUnit\Framework\TestCase
     {
 
         public int $id;
@@ -30,6 +30,13 @@
             $this->utilisateur = $pUtilisateur;
         }
 
+
+
+
+        public function greet(string $name): string
+        {
+            return 'Hello, ' . $name . '!';
+        }
 
     }
 

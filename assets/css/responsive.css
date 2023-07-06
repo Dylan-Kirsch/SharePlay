@@ -224,6 +224,14 @@
         height: 11vh;
     }
 
+    #leProfil {
+        justify-content: center;
+    }
+
+    #leProfil span {
+        display: none;
+    }
+
     .cImg {
         height: 76vh;
         border-radius: 0% 0% 100% 0% / 0% 0% 4% 0%;

@@ -15,7 +15,7 @@ class Controller
         if (empty($_SESSION['csrftoken'])) {
             $_SESSION['csrftoken'] = bin2hex(openssl_random_pseudo_bytes(32));
         }
-        return $_SESSION['csrftoken'];
+        return $_SESSION['csrftoken']; 
     }
 
     public static function checkCSRFToken()

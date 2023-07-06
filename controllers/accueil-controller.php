@@ -44,7 +44,7 @@
 
         }
 
-        public static function afficherUneNews($pId)
+        public static function afficherUneNews(int $pId)
         {
 
             $reponse = NewsDB::lire($pId);
@@ -138,7 +138,4 @@
         
     }
     
-
-    
-
 ?>

@@ -66,7 +66,7 @@
                 if (!filter_var($pData['email'], FILTER_VALIDATE_EMAIL))
                 return false;
 
-            try
+            try 
             {
                 
                 $stmt = Database::getInstance()->prepare("INSERT INTO UTILISATEUR (nom, prenom, pseudo, email, mot_de_passe)
@@ -86,7 +86,6 @@
                 echo $e->getMessage();
                 return false;
             }
-            
         }
 
 
@@ -103,7 +102,7 @@
             
             try
             {
-                $stmt = Database::getInstance()->prepare("UPDATE UTILISATEUR  SET (nom, adresse, langue)
+                $stmt = Database::getInstance()->prepare("UPDATE UTILISATEUR SET (nom, adresse, langue)
                 VALUES(:nom, :adresse, :langue) WHERE id.utilisateur");
 
                 $stmt->bindValue(':nom',$pData['nom']);

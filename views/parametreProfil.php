@@ -47,7 +47,7 @@
             <h1>Vos informations</h1>
 
             
-            <form method="POST">
+            <form action="index.php?page=parametre?modifier-profil" method="POST">
 
                 <div class="infoNom" >
 

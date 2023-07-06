@@ -25,7 +25,7 @@
     }
 
 
-    function afficherUnUnivers($pId)
+    function afficherUnUnivers(int $pId)
     {
 
         $reponse = UniversDB::lire($pId);

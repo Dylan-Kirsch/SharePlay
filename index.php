@@ -2,8 +2,6 @@
 
     require_once('config\config.php');
 
-
-
     require_once('repository\database.php');
     require_once('repository\reponse.php');
 
@@ -90,6 +88,12 @@
         case 'carousel-3D':
 
             include 'views\carousel-type\carousel-3d.php';
+
+            break;
+        
+        case 'modifier-profil':
+
+            UtilisateurController::modifier();
 
             break;
 
