@@ -188,7 +188,7 @@
 
     #navbar {
         border-radius: 0;
-        padding: 5px 1px
+        padding: 0;
     }
 
     #navGauche {
@@ -205,6 +205,63 @@
 
     #creerGalerie {
         width: 16%;
+    }
+
+    #dropCreer {
+        position: relative;
+        width: 300%;
+        right: 120px;
+    }
+
+    .titre {
+        margin: 3% 11%;
+    }
+
+    .titre h1 {
+        font-size: 1.6em;
+        margin: 0;
+    }
+
+    #jeux {
+        margin-right: 0%;
+    }
+
+    #jeux label, .univers label {
+        font-size: 0.8em;
+    }
+
+    #Jeu, #univers {
+        font-size: 0.8em;
+    }
+
+    #choixTags h1 {
+        font-size: 1.1em;
+    }
+
+    #choixTags input {
+        font-size: 0.8em;
+    }
+
+    #ajoutImg input {
+        padding-left: 55px;
+        margin: 25px 0;
+    }
+
+    #ajoutImg h1 {
+        
+        font-size: 1.3em;
+    }
+
+    .choixGalerie label {
+        font-size: 1.1em;
+    }
+
+    #typeGaleries {
+        font-size: 0.8em;
+    }
+
+    .btnValider input {
+        font-size: 1.3em;
     }
 
     #navBtn {
@@ -239,6 +296,7 @@
     
     #carousel {
         height: 77vh;
+        margin-top: -10%;
     }
 
     #carousel h1 {
@@ -260,13 +318,11 @@
         font-size: 1.2em;
     }
 
+}
 
+@media screen and (max-width: 375px) {
 
-
-
-
-
-
+    
 
 
 

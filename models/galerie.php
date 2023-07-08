@@ -1,6 +1,6 @@
-<?php declare(strict_types=1);
+<?php ;
 
-    class Galerie extends PHPUnit\Framework\TestCase
+    class Galerie
     {
 
         public int $id;
@@ -28,14 +28,6 @@
             // $this->photo = $pPhoto;
             $this->typeAffichage = $pTypeAffichage;
             $this->utilisateur = $pUtilisateur;
-        }
-
-
-
-
-        public function greet(string $name): string
-        {
-            return 'Hello, ' . $name . '!';
         }
 
     }
