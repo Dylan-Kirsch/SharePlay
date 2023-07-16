@@ -2,7 +2,7 @@
 
 <header class="container-fluid p-0">
     
-    <nav id="navbar" class="navbar navbar-expand-lg justify-content-between">
+    <nav id="navbar" class="navbar navbar-expand-lg" role="navigation">
         
         <a id="navGauche" class="navbar-brand" href="index.php">
             <img id="logo1" class="rounded-circle" src="assets/images/logo-shareplay.png" alt="logo" />

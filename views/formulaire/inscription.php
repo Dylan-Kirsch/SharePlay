@@ -35,7 +35,6 @@
         </form>
 
 <!-- INSCRIPTION --> 
-        
         <form method="POST" action="index.php?page=subscribe" >
 
             <div id="inscription">

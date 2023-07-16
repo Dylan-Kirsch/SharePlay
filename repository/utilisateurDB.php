@@ -51,8 +51,6 @@
 
         static public function creerUtilisateur($pData):bool
         {
-        
-            
             if (!(isset($pData['nom'])&& strlen($pData['nom'])))
                 return false;
                 if (!(isset($pData['prenom'])&& strlen($pData['prenom'])))
@@ -65,7 +63,7 @@
                 return false;
                 if (!filter_var($pData['email'], FILTER_VALIDATE_EMAIL))
                 return false;
-
+                
             try 
             {
                 
@@ -91,34 +89,34 @@
 
 // ************* MODIFIER UTILISATEUR ************
 
-        public static function modifInfoProfil($pData):bool
-        {
-            if (!(isset($pData['nom'])&& strlen($pData['adresse'])))
-            return false;
-                if (!(isset($pData['adresse'])&& strlen($pData['adresse'])))
-                return false;
-                if (!(isset($pData['langue'])&& strlen($pData['langue'])))
-                return false;
+        // public static function modifInfoProfil($pData):bool
+        // {
+        //     if (!(isset($pData['nom'])&& strlen($pData['adresse'])))
+        //     return false;
+        //         if (!(isset($pData['adresse'])&& strlen($pData['adresse'])))
+        //         return false;
+        //         if (!(isset($pData['langue'])&& strlen($pData['langue'])))
+        //         return false;
             
-            try
-            {
-                $stmt = Database::getInstance()->prepare("UPDATE UTILISATEUR SET (nom, adresse, langue)
-                VALUES(:nom, :adresse, :langue) WHERE id.utilisateur");
+        //     try
+        //     {
+        //         $stmt = Database::getInstance()->prepare("UPDATE UTILISATEUR SET (nom, adresse, langue)
+        //         VALUES(:nom, :adresse, :langue) WHERE id.utilisateur");
 
-                $stmt->bindValue(':nom',$pData['nom']);
-                $stmt->bindValue(':adresse',$pData['adresse']);
-                $stmt->bindValue(':langue',$pData['langue']);
+        //         $stmt->bindValue(':nom',$pData['nom']);
+        //         $stmt->bindValue(':adresse',$pData['adresse']);
+        //         $stmt->bindValue(':langue',$pData['langue']);
 
-                return $stmt->execute();
-            }
+        //         return $stmt->execute();
+        //     }
 
-            catch (PDOException $e)
-            {
-                echo $e->getMessage();
-                return false;
-            }
+        //     catch (PDOException $e)
+        //     {
+        //         echo $e->getMessage();
+        //         return false;
+        //     }
 
-        }
+        // }
 
 
 

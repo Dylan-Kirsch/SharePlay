@@ -33,8 +33,7 @@ class UtilisateurController extends Controller
     }
 
 
-    public static function inscription()
-    {
+    public static function inscription(){
         // Les tests de garde sont réalisés dans UtilisateurDB::creerUtilisateur()
         if (UtilisateurController::checkCSRFToken())
         {
@@ -43,9 +42,7 @@ class UtilisateurController extends Controller
             {
                 $_SESSION['message']='views\success\utilisateurAjouter.php';
                 header('Location: index.php');
-            }
-                
-            else 
+            } else 
             {
                 $_SESSION['error']='views\afficherException.php';
                 header('Location: index.php');
@@ -54,36 +51,36 @@ class UtilisateurController extends Controller
         else
         {
 
-                $_SESSION['error']='SECURITY ISSUE';
-                header('Location: index.php');
+            $_SESSION['error']='SECURITY ISSUE';
+            header('Location: index.php');
         }
                      
     }
 
-    public static function modifier()
-    {
-        if (UtilisateurController::checkCSRFToken())
-        {
-            $resultat = UtilisateurDB::modifInfoProfil($_POST);
-            if ($resultat)
-            {
-                $_SESSION['message']='views\success\utilisateurAjouter.php';
-                header('Location: parametreProfil.php');
-            }
+    // public static function modifier()
+    // {
+    //     if (UtilisateurController::checkCSRFToken())
+    //     {
+    //         $resultat = UtilisateurDB::modifInfoProfil($_POST);
+    //         if ($resultat)
+    //         {
+    //             $_SESSION['message']='views\success\utilisateurAjouter.php';
+    //             header('Location: parametreProfil.php');
+    //         }
                 
-            else
-              {
-                $_SESSION['error']='views\afficherException.php';
-                header('Location: parametreProfil.php');
-              } 
-        }
-        else
-        {
+    //         else
+    //           {
+    //             $_SESSION['error']='views\afficherException.php';
+    //             header('Location: parametreProfil.php');
+    //           } 
+    //     }
+    //     else
+    //     {
 
-                $_SESSION['error']='SECURITY ISSUE';
-                header('Location: parametreProfil.php');
-        }
-    }
+    //             $_SESSION['error']='SECURITY ISSUE';
+    //             header('Location: parametreProfil.php');
+    //     }
+    // }
 
 
 

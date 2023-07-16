@@ -18,7 +18,6 @@ function toggleDrop()
         nav.style.backgroundColor = "#fff";
         console.log('visible');
     }
-    
 }
 
 function toggleCreerGalerie() 

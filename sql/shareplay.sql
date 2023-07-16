@@ -82,11 +82,9 @@ CREATE TABLE IF NOT EXISTS utilisateur
 
 CREATE TABLE IF NOT EXISTS jeu
 (
-
     id INT primary key AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     photo_default VARCHAR(255) NOT NULL
-
 );
 
 INSERT INTO `jeu` (`id`, `titre`, `photo_default`) VALUES
